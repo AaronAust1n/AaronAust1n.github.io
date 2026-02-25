@@ -1,0 +1,17 @@
+{
+  "name": "aaron-aust1n-blog",
+  "version": "1.0.0",
+  "description": "Personal blog with Liquid Glass design",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.4.0"
+  }
+}
