@@ -17,8 +17,8 @@ const filteredPosts = computed(() => {
     }
   }).sort((a, b) => {
       // Sort by date descending
-      const dateA = new Date(a.frontmatter?.date || 0)
-      const dateB = new Date(b.frontmatter?.date || 0)
+      const dateA = new Date(a.date || 0)
+      const dateB = new Date(b.date || 0)
       return dateB - dateA
   })
 })
@@ -43,7 +43,7 @@ const formatDate = (dateString) => {
     <div v-else class="post-list">
       <article v-for="post in filteredPosts" :key="post.url" class="post-item">
         <div class="post-meta">
-          <time :datetime="post.frontmatter.date">{{ formatDate(post.frontmatter.date) }}</time>
+          <time :datetime="post.date">{{ formatDate(post.date) }}</time>
         </div>
         <h2 class="post-title">
           <a :href="withBase(post.url)">{{ post.title }}</a>
