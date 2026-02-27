@@ -154,16 +154,19 @@ body {
   /* Adjust content layout to be centered and full width since sidebar is hidden */
   body.is-blog-post .VPContent {
     padding-left: 0 !important; /* Remove sidebar reservation space */
+    margin-left: 0 !important;
   }
   
   /* Center the content container for better reading experience */
   body.is-blog-post .VPContent .container {
     max-width: 900px !important; 
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
   
   /* Ensure the content padding is balanced */
   body.is-blog-post .VPContent .VPDoc {
     padding: 32px 24px 96px;
+    margin: 0 auto;
+    max-width: 900px;
   }
 }
