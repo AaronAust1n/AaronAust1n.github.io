@@ -1,4 +1,9 @@
-# [Original] A Brief History of Attention: How We Lost the Ability to Stare at a Tree
+---
+title: "[Original] A Brief History of Human Attention: How We Lost the Ability to Stare at a Tree"
+date: 2026-02-25
+---
+
+# [Original] A Brief History of Human Attention: How We Lost the Ability to Stare at a Tree
 
 *Published on 2026-02-25*
 

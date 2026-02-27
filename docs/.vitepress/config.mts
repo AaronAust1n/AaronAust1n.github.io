@@ -28,6 +28,7 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: '里世界与表世界', link: '/zh/posts/inner-world-and-outer-world' },
               { text: '注意力简史', link: '/zh/posts/attention-history' }
             ]
           }
@@ -89,6 +90,7 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: 'The Inner World and the Outer World', link: '/posts/inner-world-and-outer-world' },
           { text: 'A Brief History of Attention', link: '/posts/attention-history' }
         ]
       }
