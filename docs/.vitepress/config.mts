@@ -21,7 +21,7 @@ export default defineConfig({
 
     // Key articles: Inner / outer world (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html' }]
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html' }],
 
     // Key articles: Information depression (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/information-depression.html' }],
