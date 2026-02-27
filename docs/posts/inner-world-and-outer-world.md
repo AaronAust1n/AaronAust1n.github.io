@@ -1,11 +1,14 @@
 ---
 title: "[Original] The Inner World and the Outer World"
 date: 2026-02-26
+description: "An essay on the emerging split between AI’s “inner world” of infrastructure and optimization and the human “outer world” of lived experience, and what it means for power, resources, and our role as interfaces."
 ---
 
 # [Original] The Inner World and the Outer World
 
 > Two worlds — or two faces of the same world
+
+Published on 2026-02-26
 
 Stack Overflow’s traffic and market value collapsing isn’t strange in itself. Platforms have lifecycles; tech communities rise and fall. What’s unusual is *how* it declined: programmers didn’t leave — they simply stopped needing to ask each other questions. That shift made me think: are AI and human infrastructure undergoing a structural split? AI may be building an increasingly independent **“inner world”** (infrastructure, economy, politics), while the human world — the **“outer world”** (apps, physical stores, cinemas) — gradually withers.
 

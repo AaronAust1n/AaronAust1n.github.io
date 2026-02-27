@@ -2,8 +2,14 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "AaronAust1n",
-  description: "A Liquid Glass Style Blog",
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  description: "A Personal Blog, record my thoughts and ideas, and share my knowledge and experiences. Wait for the world to be rebuilt by AGI. And save a copy for myself.",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'google-site-verification', content: '7qOTQI0S3WKsYoD1raJBVSPNzUVUo-J3hLqeGLcpL_0' }]
+  ],
+  sitemap: {
+    hostname: 'https://aaronaust1n.github.io'
+  },
   
   // Internationalization Configuration
   locales: {

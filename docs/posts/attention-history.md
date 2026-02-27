@@ -1,9 +1,12 @@
 ---
 title: "[Original] A Brief History of Human Attention: How We Lost the Ability to Stare at a Tree"
 date: 2026-02-25
+description: "A long-form essay tracing how human attention evolved from hunter-gatherer panoramic awareness to deep reading and today’s digital distraction, and what it means for our ability to focus."
 ---
 
 # [Original] A Brief History of Human Attention: How We Lost the Ability to Stare at a Tree
+
+> We are the only content consumers on this planet, right?
 
 *Published on 2026-02-25*
 
