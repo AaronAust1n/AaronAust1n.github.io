@@ -5,7 +5,27 @@ export default defineConfig({
   description: "A Personal Blog, record my thoughts and ideas, and share my knowledge and experiences. Wait for the world to be rebuilt by AGI. And save a copy for myself.",
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'google-site-verification', content: '7qOTQI0S3WKsYoD1raJBVSPNzUVUo-J3hLqeGLcpL_0' }]
+    ['meta', { name: 'google-site-verification', content: '7qOTQI0S3WKsYoD1raJBVSPNzUVUo-J3hLqeGLcpL_0' }],
+
+    // Home (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/' }],
+
+    // Blog index (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/' }],
+
+    // Key articles: Attention history (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/attention-history.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/attention-history.html' }],
+
+    // Key articles: Inner / outer world (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html' }]
+
+    // Key articles: Information depression (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/information-depression.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/information-depression.html' }]
   ],
   sitemap: {
     hostname: 'https://aaronaust1n.github.io'
@@ -34,6 +54,7 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: '当软件正在变成手工艺，我们正在制造一场信息大萧条', link: '/zh/posts/information-depression' },
               { text: '里世界与表世界', link: '/zh/posts/inner-world-and-outer-world' },
               { text: '注意力简史', link: '/zh/posts/attention-history' }
             ]
@@ -96,6 +117,7 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: 'When Software Becomes Handicraft, We Are Building an Information Great Depression', link: '/posts/information-depression' },
           { text: 'The Inner World and the Outer World', link: '/posts/inner-world-and-outer-world' },
           { text: 'A Brief History of Attention', link: '/posts/attention-history' }
         ]
