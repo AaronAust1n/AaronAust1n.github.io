@@ -15,7 +15,8 @@ tags:
   - Multi-Agent System
   - AGI Infrastructure
   - AI Security
-keywords: "AI Agent, Agent Infrastructure, OAuth, Identity Protocol, MCP, Model Context Protocol, AI Authorization, Agent Memory, Multi-Agent System, AGI Infrastructure, AI Security, Agent Identity, Permission Management"
+keywords: "AI Agent, Agent Infrastructure, Hashmind, OAuth, Identity Protocol, MCP, Model Context Protocol, AI Authorization, Agent Memory, Multi-Agent System, AGI Infrastructure, AI Security, Agent Identity, Permission Management"
+
 ---
 
 ### [Original] We Got Agent Infrastructure Wrong
@@ -25,10 +26,8 @@ keywords: "AI Agent, Agent Infrastructure, OAuth, Identity Protocol, MCP, Model 
 *Published on February 28, 2026*
 
 
-# We Got Agent Infrastructure Wrong
 
 When people discuss Agent infrastructure, they default to a mental model: chips on the left, data centers in the middle, large models on the right, Agents at the top. This picture isn't wrong, but it describes the fuel for Agents, not the foundation they actually operate on.
-
 
 
 ---
