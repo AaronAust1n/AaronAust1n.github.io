@@ -52,9 +52,11 @@ const selectedTag = ref<string | null>(null)
 const tagCounts = computed(() => {
   const counts = new Map<string, number>()
   posts.forEach(post => {
-    if (post.frontmatter.tags) {
+    if (post?.frontmatter?.tags && Array.isArray(post.frontmatter.tags)) {
       post.frontmatter.tags.forEach(tag => {
-        counts.set(tag, (counts.get(tag) || 0) + 1)
+        if (tag) {
+          counts.set(tag, (counts.get(tag) || 0) + 1)
+        }
       })
     }
   })
@@ -70,7 +72,9 @@ const sortedTags = computed(() => {
 const filteredPosts = computed(() => {
   if (!selectedTag.value) return []
   return posts.filter(post => 
-    post.frontmatter.tags?.includes(selectedTag.value)
+    post?.frontmatter?.tags && 
+    Array.isArray(post.frontmatter.tags) && 
+    post.frontmatter.tags.includes(selectedTag.value)
   )
 })
 
