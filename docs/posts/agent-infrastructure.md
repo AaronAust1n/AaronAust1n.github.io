@@ -19,7 +19,7 @@ keywords: "AI Agent, Agent Infrastructure, Hashmind, OAuth, Identity Protocol, M
 
 ---
 
-### [Original] We Got Agent Infrastructure Wrong
+# [Original] We Got Agent Infrastructure Wrong
 
 > The real question is: when an agent starts acting on your behalf — booking flights, sending emails, writing and deploying code, managing your calendar — what authorizes it to do that? Whose identity does it carry? When something goes wrong, who's liable?
 
@@ -31,7 +31,7 @@ Everyone discussing AI infrastructure defaults to the same mental diagram: chips
 
 ---
 
-# We're Building the Wrong Infrastructure for the Age of Agents
+### We're Building the Wrong Infrastructure for the Age of Agents
 
 Everyone discussing AI infrastructure defaults to the same mental diagram: chips on the left, data centers in the middle, foundation models on the right, agents stacked on top. The diagram isn't wrong — it just describes the fuel, not the foundation.
 
@@ -41,7 +41,7 @@ Right now, nobody has a satisfying answer.
 
 ---
 
-## We're Hammering in Screws
+### We're Hammering in Screws
 
 OAuth is the dominant authorization mechanism for agents today. It was designed in 2006 to solve a specific, narrow problem: let a third-party app read your Gmail without handing over your password. The entire design assumes a human sitting in front of a browser, clicking "Allow."
 
@@ -51,7 +51,7 @@ That's just the authorization layer. There are two deeper problems underneath it
 
 ---
 
-## Layer One: Identity
+### Layer One: Identity
 
 Agents today have no identity of their own. They operate on borrowed credentials.
 
@@ -80,7 +80,7 @@ For agents to be genuinely useful over time, memory needs to be portable, user-h
 
 ---
 
-## Layer Three: Protocol
+### Layer Three: Protocol
 
 How do multi-agent systems coordinate today? Natural language.
 
@@ -100,7 +100,7 @@ What's interesting isn't the technology — it's that the protocol layer and the
 
 ---
 
-## Pushing Back on Myself
+### Pushing Back on Myself
 
 Identity, memory, protocol — it's a clean argument. But who actually builds this?
 
@@ -114,7 +114,7 @@ This isn't just a technical question. It's a question about who gets to define t
 
 ---
 
-## What's Actually Missing
+### What's Actually Missing
 
 Power grids are energy infrastructure. Chips are compute infrastructure. Data centers are storage and transmission infrastructure. These are the physical preconditions for agents to exist at all.
 
