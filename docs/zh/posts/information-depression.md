@@ -2,6 +2,19 @@
 title: "[原创] 当软件正在变成手工艺，我们正在制造一场信息大萧条"
 date: 2026-02-27
 description: "从 GitHub 开源“垃圾场”到 Claude Code 造脚本，思考当软件回归手工艺、信息生产成本趋近于零时，我们如何亲手制造出一场信息大萧条。"
+tags:
+  - 开源生态
+  - 代码生成
+  - 信息通胀
+  - 软件手工艺
+  - AI生成内容
+  - 开发者工具
+  - GitHub
+  - Claude Code
+  - Stack Overflow
+  - 大语言模型
+keywords: "开源生态, 代码生成, 信息通胀, 软件手工艺, AI生成内容, 开发者工具, GitHub, Claude Code, Stack Overflow, 大语言模型, 信息大萧条, 软件开发"
+
 ---
 
 ### [原创] 当软件正在变成手工艺，我们正在制造一场信息大萧条

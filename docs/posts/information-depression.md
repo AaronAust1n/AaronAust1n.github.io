@@ -2,6 +2,20 @@
 title: "[Original] When Software Becomes Handicraft, We Are Building an Information Great Depression"
 date: 2026-02-27
 description: "From GitHub’s open-source junkyard to Claude Code throwaway scripts, this essay explores how near-zero-cost software and content production are pushing us toward an information great depression."
+tags:
+  - GitHub
+  - Open Source
+  - Claude Code
+  - AI Generated Content
+  - Information Inflation
+  - Software Craftsmanship
+  - Code Generation
+  - LLM
+  - Developer Tools
+  - AI Coding
+  - Stack Overflow
+keywords: "GitHub, Open Source, Claude Code, AI Generated Content, Information Inflation, Software Craftsmanship, Code Generation, LLM, Developer Tools, AI Coding, Stack Overflow, Information Depression, Software Development"
+
 ---
 
 # [Original] When Software Becomes Handicraft, We Are Building an Information Great Depression

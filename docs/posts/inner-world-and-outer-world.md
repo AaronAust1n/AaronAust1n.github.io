@@ -2,6 +2,20 @@
 title: "[Original] The Inner World and the Outer World"
 date: 2026-02-26
 description: "An essay on the emerging split between AI’s “inner world” of infrastructure and optimization and the human “outer world” of lived experience, and what it means for power, resources, and our role as interfaces."
+tags:
+  - AI Infrastructure
+  - Stack Overflow
+  - Human-AI Relationship
+  - Resource Allocation
+  - Energy Consumption
+  - Data Center
+  - AGI
+  - Digital Economy
+  - Power Dynamics
+  - AI Ethics
+  - Sam Altman
+keywords: "AI Infrastructure, Stack Overflow, Human-AI Relationship, Resource Allocation, Energy Consumption, Data Center, AGI, Digital Economy, Power Dynamics, AI Ethics, Sam Altman, AI vs Human, Future of Work"
+
 ---
 
 # [Original] The Inner World and the Outer World

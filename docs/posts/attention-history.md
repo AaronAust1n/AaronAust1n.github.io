@@ -2,6 +2,21 @@
 title: "[Original] A Brief History of Human Attention: How We Lost the Ability to Stare at a Tree"
 date: 2026-02-25
 description: "A long-form essay tracing how human attention evolved from hunter-gatherer panoramic awareness to deep reading and today’s digital distraction, and what it means for our ability to focus."
+tags:
+  - Attention Economy
+  - Digital Distraction
+  - Deep Reading
+  - Information Overload
+  - Cognitive Evolution
+  - Social Media
+  - Algorithm
+  - Dopamine
+  - Focus
+  - Mindfulness
+  - TikTok
+  - Content Consumption
+keywords: "Attention Economy, Digital Distraction, Deep Reading, Information Overload, Cognitive Evolution, Social Media, Algorithm, Dopamine, Focus, Mindfulness, TikTok, Content Consumption, Human Attention, Digital Age"
+
 ---
 
 # [Original] A Brief History of Human Attention: How We Lost the Ability to Stare at a Tree

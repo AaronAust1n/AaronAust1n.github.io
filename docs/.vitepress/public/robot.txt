@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aaronaust1n.github.io/sitemap.xml

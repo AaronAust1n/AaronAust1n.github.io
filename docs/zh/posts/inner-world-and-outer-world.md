@@ -2,6 +2,20 @@
 title: "[原创] 里世界与表世界"
 date: 2026-02-26
 description: "以 Stack Overflow 的式微为切口，思考 AI 构建的“里世界”和人类“表世界”的结构性分化，以及资源分配、决策权旁落与人类角色重构。"
+tags:
+  - AI基础设施
+  - Stack Overflow
+  - 人机关系
+  - 资源分配
+  - 能源消耗
+  - 数据中心
+  - AGI
+  - 数字经济
+  - 权力结构
+  - AI伦理
+  - Sam Altman
+keywords: "AI基础设施, Stack Overflow, 人机关系, 资源分配, 能源消耗, 数据中心, AGI, 数字经济, 权力结构, AI伦理, Sam Altman, AI与人类, 未来工作"
+
 ---
 
 # [原创] 里世界与表世界

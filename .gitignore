@@ -11,3 +11,5 @@ docs/**/hello-world.md
 .cursor
 .cursorindexingignore
 .specstory
+.kiro
+blog

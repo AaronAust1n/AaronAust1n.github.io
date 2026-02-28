@@ -3,6 +3,44 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "AaronAust1n",
   description: "A Personal Blog, record my thoughts and ideas, and share my knowledge and experiences. Wait for the world to be rebuilt by AGI. And save a copy for myself.",
+  
+  // Transform frontmatter to meta tags for SEO
+  transformHead: ({ pageData }) => {
+    const head = []
+    
+    // Add keywords meta tag
+    if (pageData.frontmatter.keywords) {
+      head.push(['meta', { name: 'keywords', content: pageData.frontmatter.keywords }])
+    }
+    
+    // Add Open Graph tags
+    if (pageData.frontmatter.title) {
+      head.push(['meta', { property: 'og:title', content: pageData.frontmatter.title }])
+    }
+    if (pageData.frontmatter.description) {
+      head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description }])
+    }
+    if (pageData.frontmatter.date) {
+      head.push(['meta', { property: 'article:published_time', content: pageData.frontmatter.date }])
+    }
+    if (pageData.frontmatter.tags) {
+      pageData.frontmatter.tags.forEach(tag => {
+        head.push(['meta', { property: 'article:tag', content: tag }])
+      })
+    }
+    
+    // Add Twitter Card tags
+    head.push(['meta', { name: 'twitter:card', content: 'summary_large_image' }])
+    if (pageData.frontmatter.title) {
+      head.push(['meta', { name: 'twitter:title', content: pageData.frontmatter.title }])
+    }
+    if (pageData.frontmatter.description) {
+      head.push(['meta', { name: 'twitter:description', content: pageData.frontmatter.description }])
+    }
+    
+    return head
+  },
+  
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'google-site-verification', content: '7qOTQI0S3WKsYoD1raJBVSPNzUVUo-J3hLqeGLcpL_0' }],
@@ -25,7 +63,11 @@ export default defineConfig({
 
     // Key articles: Information depression (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/information-depression.html' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/information-depression.html' }]
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/information-depression.html' }],
+
+    // Key articles: Agent infrastructure (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/agent-infrastructure.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html' }]
   ],
   sitemap: {
     hostname: 'https://aaronaust1n.github.io'
@@ -47,6 +89,7 @@ export default defineConfig({
         nav: [
           { text: '首页', link: '/zh/' },
           { text: '博客', link: '/zh/posts/' },
+          { text: '标签', link: '/zh/posts/tags' },
           { text: '投票', link: '/zh/vote' }
         ],
 
@@ -54,6 +97,7 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: 'Agent时代的基建，我们想错了', link: '/zh/posts/agent-infrastructure' },
               { text: '当软件正在变成手工艺，我们正在制造一场信息大萧条', link: '/zh/posts/information-depression' },
               { text: '里世界与表世界', link: '/zh/posts/inner-world-and-outer-world' },
               { text: '注意力简史', link: '/zh/posts/attention-history' }
@@ -110,6 +154,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Blog', link: '/posts/' },
+      { text: 'Tags', link: '/posts/tags' },
       { text: 'Vote', link: '/vote' }
     ],
 
@@ -117,6 +162,7 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: 'We Got Agent Infrastructure Wrong', link: '/posts/agent-infrastructure' },
           { text: 'When Software Becomes Handicraft, We Are Building an Information Great Depression', link: '/posts/information-depression' },
           { text: 'The Inner World and the Outer World', link: '/posts/inner-world-and-outer-world' },
           { text: 'A Brief History of Attention', link: '/posts/attention-history' }
