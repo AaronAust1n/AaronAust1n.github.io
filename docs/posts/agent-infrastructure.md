@@ -65,7 +65,7 @@ This doesn't exist yet. MCP (Model Context Protocol) is a step forward, but it s
 
 ---
 
-## Layer Two: Memory
+### Layer Two: Memory
 
 An agent's memory today is session-scoped. Close the window, it's gone.
 
