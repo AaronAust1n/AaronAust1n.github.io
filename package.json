@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs && cp docs/.vitepress/public/robots.txt docs/.vitepress/dist/robots.txt && cp docs/.vitepress/public/sitemap.xsl docs/.vitepress/dist/sitemap.xsl && touch docs/.vitepress/dist/.nojekyll",
-    "docs:preview": "vitepress preview docs"
+    "docs:build": "node scripts/generate-sitemap.js && vitepress build docs && cp docs/.vitepress/public/sitemap.xml docs/.vitepress/dist/sitemap.xml && cp docs/.vitepress/public/sitemap.xsl docs/.vitepress/dist/sitemap.xsl && touch docs/.vitepress/dist/.nojekyll",
+    "docs:preview": "vitepress preview docs",
+    "generate:sitemap": "node scripts/generate-sitemap.js"
   },
   "license": "MIT",
   "devDependencies": {

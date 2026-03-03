@@ -1,103 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aaronaust1n.github.io/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/"/>
   </url>
   <url>
     <loc>https://aaronaust1n.github.io/zh/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/"/>
   </url>
   <url>
-    <loc>https://aaronaust1n.github.io/posts/agent-infrastructure.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/agent-infrastructure.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/agent-infrastructure.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/posts/ai-opportunity-blog.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/ai-opportunity-blog.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/ai-opportunity-blog.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/zh/posts/ai-opportunity-blog.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/ai-opportunity-blog.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/ai-opportunity-blog.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/posts/attention-history.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/attention-history.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/attention-history.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/zh/posts/attention-history.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/attention-history.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/attention-history.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/posts/blog_ontology_decision.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/blog_ontology_decision.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/blog_ontology_decision.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/zh/posts/blog_ontology_decision.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/blog_ontology_decision.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/blog_ontology_decision.html"/>
-  </url>
-  <url>
     <loc>https://aaronaust1n.github.io/posts/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>dayly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/"/>
   </url>
   <url>
     <loc>https://aaronaust1n.github.io/zh/posts/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>dayly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/"/>
   </url>
   <url>
-    <loc>https://aaronaust1n.github.io/posts/information-depression.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/information-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/information-depression.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/zh/posts/information-depression.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/information-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/information-depression.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/posts/palantir_valuation.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/palantir_valuation.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/palantir_valuation.html"/>
-  </url>
-  <url>
-    <loc>https://aaronaust1n.github.io/zh/posts/palantir_valuation.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/palantir_valuation.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/palantir_valuation.html"/>
-  </url>
-  <url>
     <loc>https://aaronaust1n.github.io/posts/tags.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/tags.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/tags.html"/>
   </url>
   <url>
     <loc>https://aaronaust1n.github.io/zh/posts/tags.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/tags.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/tags.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/agent-infrastructure.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/agent-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/agent-infrastructure.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/ai-opportunity-blog.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/ai-opportunity-blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/ai-opportunity-blog.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/ai-opportunity-blog.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/ai-opportunity-blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/ai-opportunity-blog.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/attention-history.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/attention-history.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/attention-history.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/attention-history.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/attention-history.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/attention-history.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/blog_ontology_decision.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/blog_ontology_decision.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/blog_ontology_decision.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/blog_ontology_decision.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/blog_ontology_decision.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/blog_ontology_decision.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/hello-world.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/hello-world.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/hello-world.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/hello-world.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/hello-world.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/hello-world.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/information-depression.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/information-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/information-depression.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/information-depression.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/information-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/information-depression.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/inner-world-and-outer-world.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/inner-world-and-outer-world.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/palantir_valuation.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/palantir_valuation.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/palantir_valuation.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/palantir_valuation.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/palantir_valuation.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/palantir_valuation.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/posts/tags.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/tags.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/tags.html"/>
+  </url>
+  <url>
+    <loc>https://aaronaust1n.github.io/zh/posts/tags.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aaronaust1n.github.io/posts/tags.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aaronaust1n.github.io/zh/posts/tags.html"/>
   </url>

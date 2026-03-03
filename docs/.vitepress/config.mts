@@ -81,9 +81,9 @@ export default defineConfig({
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/palantir_valuation.html' }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/palantir_valuation.html' }]
   ],
-  sitemap: {
-    hostname: 'https://aaronaust1n.github.io'
-  },
+  // sitemap: {
+  //   hostname: 'https://aaronaust1n.github.io'
+  // },
   
   // Internationalization Configuration
   locales: {
