@@ -67,7 +67,19 @@ export default defineConfig({
 
     // Key articles: Agent infrastructure (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/agent-infrastructure.html' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html' }]
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/agent-infrastructure.html' }],
+
+    // Key articles: AI opportunity (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/ai-opportunity-blog.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/ai-opportunity-blog.html' }],
+
+    // Key articles: Ontology decision (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/blog_ontology_decision.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/blog_ontology_decision.html' }],
+
+    // Key articles: Palantir valuation (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/palantir_valuation.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/palantir_valuation.html' }]
   ],
   sitemap: {
     hostname: 'https://aaronaust1n.github.io'
@@ -97,6 +109,9 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: '84%的人类还没碰过AI，这才是真正的故事', link: '/zh/posts/ai-opportunity-blog' },
+              { text: 'AI决策的真正瓶颈不是算法，而是你无法形式化业务逻辑', link: '/zh/posts/blog_ontology_decision' },
+              { text: 'Palantir的4000亿估值，藏在哪个盲区里？', link: '/zh/posts/palantir_valuation' },
               { text: 'Agent时代的基建，我们想错了', link: '/zh/posts/agent-infrastructure' },
               { text: '当软件正在变成手工艺，我们正在制造一场信息大萧条', link: '/zh/posts/information-depression' },
               { text: '里世界与表世界', link: '/zh/posts/inner-world-and-outer-world' },
@@ -162,6 +177,9 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: '84% of Humanity Hasn\'t Touched AI Yet—That\'s the Real Story', link: '/posts/ai-opportunity-blog' },
+          { text: 'The Real Bottleneck in AI Decision-Making Isn\'t Algorithms', link: '/posts/blog_ontology_decision' },
+          { text: 'Palantir\'s $400B Valuation—What Blind Spot Is It Hiding In?', link: '/posts/palantir_valuation' },
           { text: 'We Got Agent Infrastructure Wrong', link: '/posts/agent-infrastructure' },
           { text: 'When Software Becomes Handicraft, We Are Building an Information Great Depression', link: '/posts/information-depression' },
           { text: 'The Inner World and the Outer World', link: '/posts/inner-world-and-outer-world' },

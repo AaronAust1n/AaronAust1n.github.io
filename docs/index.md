@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "AaronAust1n"
-  text: "Digital Garden"
-  tagline: "Thinking through Liquid"
+  text: "Cyber Junkyard"
+  tagline: "Obsessed with grand narratives, expert at missing the point, never grounded."
   actions:
     - theme: brand
       text: Read Blog

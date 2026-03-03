@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "AaronAust1n"
-  text: "数字花园"
-  tagline: "透过流动的玻璃思考"
+  text: "赛博垃圾场"
+  tagline: "热爱宏大叙事，专门刻舟求剑，从不脚踏实地。"
   actions:
     - theme: brand
       text: 阅读博客
@@ -17,7 +17,7 @@ features:
   - title: 加速主义
     details: 理解真实，打破束缚
   - title: 流动的玻璃
-    details: 数字空间背后的趋势
+    details: 在屏幕前看懂数字空间背后的趋势
   - title: 互动体验
     details: 参与社区投票与讨论。
 ---
