@@ -16,13 +16,13 @@ tags:
 keywords: "AI decision-making, ontology, explainable AI, business logic formalization, causal reasoning, knowledge graphs, rule engines, enterprise simulation, decision systems, black box models, inference chains"
 ---
 
-### The Real Bottleneck in AI Decision-Making Isn't Algorithms—It's Your Inability to Formalize Business Logic
+# The Real Bottleneck in AI Decision-Making Isn't Algorithms—It's Your Inability to Formalize Business Logic
 
 > When you need to bet millions on a decision, you'll find what you really want to know isn't "what will happen," but "how the hell was this calculated?"
 
 *Published on March 2, 2026*
 
-# The Real Bottleneck in AI Decision-Making Isn't Algorithms—It's Your Inability to Formalize Business Logic
+
 
 I spent two days building a complete enterprise simulation system—880 employees, 66,830 transactions, 24 months of financial data. The goal was to verify one thing: **can ontology + AI make decisions truly explainable?**
 
