@@ -44,6 +44,8 @@ jobs:
         run: npm ci
       - name: Build with VitePress
         run: npm run docs:build
+      - name: Copy robots.txt to dist
+        run: cp docs/.vitepress/public/robots.txt docs/.vitepress/dist/robots.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

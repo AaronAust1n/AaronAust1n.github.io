@@ -79,7 +79,11 @@ export default defineConfig({
 
     // Key articles: Palantir valuation (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/palantir_valuation.html' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/palantir_valuation.html' }]
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/palantir_valuation.html' }],
+
+    // Key articles: Open source trap (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/opensource-trap.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/opensource-trap.html' }]
   ],
   // sitemap: {
   //   hostname: 'https://aaronaust1n.github.io'
@@ -109,6 +113,7 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: '开源大模型的诅咒', link: '/zh/posts/opensource-trap' },
               { text: '84%的人类还没碰过AI，这才是真正的故事', link: '/zh/posts/ai-opportunity-blog' },
               { text: 'AI决策的真正瓶颈不是算法，而是你无法形式化业务逻辑', link: '/zh/posts/blog_ontology_decision' },
               { text: 'Palantir的4000亿估值，藏在哪个盲区里？', link: '/zh/posts/palantir_valuation' },
@@ -177,6 +182,7 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: 'The Curse of Open Source LLMs', link: '/posts/opensource-trap' },
           { text: '84% of Humanity Hasn\'t Touched AI Yet—That\'s the Real Story', link: '/posts/ai-opportunity-blog' },
           { text: 'The Real Bottleneck in AI Decision-Making Isn\'t Algorithms', link: '/posts/blog_ontology_decision' },
           { text: 'Palantir\'s $400B Valuation—What Blind Spot Is It Hiding In?', link: '/posts/palantir_valuation' },
