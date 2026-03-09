@@ -1,5 +1,5 @@
 ---
-title: "84% of Humanity Hasn't Touched AI Yet—That's the Real Story"
+title: "[Original] 84% of Humanity Hasn't Touched AI Yet—That's the Real Story"
 date: 2026-03-03
 description: "6.8 billion people have never used AI. This isn't evidence of a bubble—it's evidence of opportunity. The real penetration will happen in non-English markets, lower-education users, and professions beyond white-collar work."
 tags:

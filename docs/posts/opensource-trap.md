@@ -22,7 +22,7 @@ keywords: "Open Source, LLM, Qwen, Meta, Alibaba, AI, OpenAI, DeepSeek, AGI, Age
 
 > "What kind of organizational structure can protect long-term technical investment?"
 
-*Published on 2026-02-28*
+*Published on 2026-03-04*
 
 
 # The Team Behind the World's Most Downloaded Open Source Model Just Fell Apart

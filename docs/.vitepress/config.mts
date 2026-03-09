@@ -81,15 +81,23 @@ export default defineConfig({
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/palantir_valuation.html' }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/palantir_valuation.html' }],
 
+    // Key articles: OpenClaw security concerns (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/openclaw-security-concerns.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/openclaw-security-concerns.html' }],
+
     // Key articles: Open source trap (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/opensource-trap.html' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/opensource-trap.html' }]
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/opensource-trap.html' }],
+
+    // Key articles: Digital ownership luxury (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/digital-ownership-luxury.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/digital-ownership-luxury.html' }],
+
+    // Key articles: OpenClaw dividend period (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/openclaw-dividend-period.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/openclaw-dividend-period.html' }],
   ],
-  // sitemap: {
-  //   hostname: 'https://aaronaust1n.github.io'
-  // },
-  
-  // Internationalization Configuration
+
   locales: {
     root: {
       label: 'English',
@@ -113,6 +121,9 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: 'OpenClaw的红利期还有多久', link: '/zh/posts/openclaw-dividend-period' },
+              { text: '"我的"是奢侈品', link: '/zh/posts/digital-ownership-luxury' },
+              { text: 'OpenClaw全民狂欢的背后', link: '/zh/posts/openclaw-security-concerns' },
               { text: '开源大模型的诅咒', link: '/zh/posts/opensource-trap' },
               { text: '84%的人类还没碰过AI，这才是真正的故事', link: '/zh/posts/ai-opportunity-blog' },
               { text: 'AI决策的真正瓶颈不是算法，而是你无法形式化业务逻辑', link: '/zh/posts/blog_ontology_decision' },
@@ -182,6 +193,9 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: 'How Long Does OpenClaw\'s Window Last', link: '/posts/openclaw-dividend-period' },
+          { text: '\'Mine\' Is a Luxury', link: '/posts/digital-ownership-luxury' },
+          { text: 'Behind OpenClaw's Viral Moment', link: '/posts/openclaw-security-concerns' },
           { text: 'The Curse of Open Source LLMs', link: '/posts/opensource-trap' },
           { text: '84% of Humanity Hasn\'t Touched AI Yet—That\'s the Real Story', link: '/posts/ai-opportunity-blog' },
           { text: 'The Real Bottleneck in AI Decision-Making Isn\'t Algorithms', link: '/posts/blog_ontology_decision' },
