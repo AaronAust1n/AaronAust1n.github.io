@@ -201,7 +201,7 @@ export default defineConfig({
         items: [
           { text: 'How Long Does OpenClaw\'s Window Last', link: '/posts/openclaw-dividend-period' },
           { text: '\'Mine\' Is a Luxury', link: '/posts/digital-ownership-luxury' },
-          { text: 'Behind OpenClaw's Viral Moment', link: '/posts/openclaw-security-concerns' },
+          { text: 'Behind OpenClaw\'s Viral Moment', link: '/posts/openclaw-security-concerns' },
           { text: 'The Curse of Open Source LLMs', link: '/posts/opensource-trap' },
           { text: '84% of Humanity Hasn\'t Touched AI Yet—That\'s the Real Story', link: '/posts/ai-opportunity-blog' },
           { text: 'The Real Bottleneck in AI Decision-Making Isn\'t Algorithms', link: '/posts/blog_ontology_decision' },
