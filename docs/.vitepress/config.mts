@@ -97,6 +97,12 @@ export default defineConfig({
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/openclaw-dividend-period.html' }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/openclaw-dividend-period.html' }],
   ],
+  
+  // sitemap: {
+  //   hostname: 'https://aaronaust1n.github.io'
+  // },
+  
+  // Internationalization Configuration
 
   locales: {
     root: {
