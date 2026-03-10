@@ -18,13 +18,15 @@ tags:
 - 阿里巴巴
 keywords: "OpenClaw, 巴别塔, AI Agent, 开源, GitHub, 群体智慧, 贡献者, Claw变体, 腾讯, 字节跳动, 阿里巴巴, Nanobot, PicoClaw, ZeroClaw, Peter Steinberger"
 
+---
+
 # OpenClaw是我们这个时代的巴别塔吗
 
 > 龙虾最可怕的不是现在有多疯狂，是它还在长。
 
 *发布于 2026年3月10日*
 
-2026年3月，GitHub上一个项目的star数突破了289,000。超过React，超过Linux内核。一个三个多月前还不存在的东西，现在每天有将近7,000个开发者按下Star。
+2026年3月，GitHub上一个项目的star数突破了291,000。超过React，超过Linux内核。一个三个多月前还不存在的东西，现在每天有将近7,000个开发者按下Star。
 
 这个项目叫OpenClaw。
 
