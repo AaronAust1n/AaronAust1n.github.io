@@ -205,7 +205,7 @@ export default defineConfig({
         text: 'Recent Posts',
         items: [
           { text: 'Is OpenClaw the Tower of Babel of Our Time?', link: '/posts/openclaw-babel-tower' },
-          { text: 'How Long Does OpenClaw's Window Last', link: '/posts/openclaw-dividend-period' },
+          { text: 'How Long Does OpenClaw\'s Window Last', link: '/posts/openclaw-dividend-period' },
           { text: '\'Mine\' Is a Luxury', link: '/posts/digital-ownership-luxury' },
           { text: 'Behind OpenClaw\'s Viral Moment', link: '/posts/openclaw-security-concerns' },
           { text: 'The Curse of Open Source LLMs', link: '/posts/opensource-trap' },
