@@ -93,6 +93,10 @@ export default defineConfig({
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/digital-ownership-luxury.html' }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/digital-ownership-luxury.html' }],
 
+    // Key articles: OpenClaw babel tower (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/openclaw-babel-tower.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/openclaw-babel-tower.html' }],
+
     // Key articles: OpenClaw dividend period (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/openclaw-dividend-period.html' }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/openclaw-dividend-period.html' }],
@@ -127,6 +131,7 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: 'OpenClaw是我们这个时代的巴别塔吗', link: '/zh/posts/openclaw-babel-tower' },
               { text: 'OpenClaw的红利期还有多久', link: '/zh/posts/openclaw-dividend-period' },
               { text: '"我的"是奢侈品', link: '/zh/posts/digital-ownership-luxury' },
               { text: 'OpenClaw全民狂欢的背后', link: '/zh/posts/openclaw-security-concerns' },
@@ -199,7 +204,8 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
-          { text: 'How Long Does OpenClaw\'s Window Last', link: '/posts/openclaw-dividend-period' },
+          { text: 'Is OpenClaw the Tower of Babel of Our Time?', link: '/posts/openclaw-babel-tower' },
+          { text: 'How Long Does OpenClaw's Window Last', link: '/posts/openclaw-dividend-period' },
           { text: '\'Mine\' Is a Luxury', link: '/posts/digital-ownership-luxury' },
           { text: 'Behind OpenClaw\'s Viral Moment', link: '/posts/openclaw-security-concerns' },
           { text: 'The Curse of Open Source LLMs', link: '/posts/opensource-trap' },
