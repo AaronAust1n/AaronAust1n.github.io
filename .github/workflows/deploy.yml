@@ -46,6 +46,8 @@ jobs:
         run: npm run docs:build
       - name: Copy robots.txt to dist
         run: cp docs/.vitepress/public/robots.txt docs/.vitepress/dist/robots.txt
+      - name: Copy BingSiteAuth.xml to dist
+        run: cp docs/.vitepress/public/BingSiteAuth.xml docs/.vitepress/dist/BingSiteAuth.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
