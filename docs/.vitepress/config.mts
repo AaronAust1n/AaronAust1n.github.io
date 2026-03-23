@@ -100,6 +100,22 @@ export default defineConfig({
     // Key articles: OpenClaw dividend period (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/openclaw-dividend-period.html' }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/openclaw-dividend-period.html' }],
+
+    // Key articles: Community History Part 4 (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/ghost-town-or-new-frontier.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/ghost-town-or-new-frontier.html' }],
+
+    // Key articles: Community History Part 3 (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/agent-community-dawn-moltbook.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/agent-community-dawn-moltbook.html' }],
+
+    // Key articles: Community History Part 2 (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/red-ocean-platform-wars.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/red-ocean-platform-wars.html' }],
+
+    // Key articles: Community History Part 1 (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/community-history-campfire-to-reddit.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/community-history-campfire-to-reddit.html' }],
   ],
   
   // sitemap: {
@@ -131,6 +147,10 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: '社区简史 · 第四篇：鬼城还是新大陆', link: '/zh/posts/ghost-town-or-new-frontier' },
+              { text: '社区简史 · 第三篇：Agent社区的黎明', link: '/zh/posts/agent-community-dawn-moltbook' },
+              { text: '社区简史 · 第二篇：红海里的地盘战争', link: '/zh/posts/red-ocean-platform-wars' },
+              { text: '社区简史 · 第一篇：火堆、贴吧与15万个机器人', link: '/zh/posts/community-history-campfire-to-reddit' },
               { text: 'OpenClaw是我们这个时代的巴别塔吗', link: '/zh/posts/openclaw-babel-tower' },
               { text: 'OpenClaw的红利期还有多久', link: '/zh/posts/openclaw-dividend-period' },
               { text: '"我的"是奢侈品', link: '/zh/posts/digital-ownership-luxury' },
@@ -204,6 +224,10 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: 'Community History · Part 4: Ghost Town or New Frontier', link: '/posts/ghost-town-or-new-frontier' },
+          { text: 'Community History · Part 3: The Dawn of Agent Communities', link: '/posts/agent-community-dawn-moltbook' },
+          { text: 'Community History · Part 2: Platform Wars in the Red Ocean', link: '/posts/red-ocean-platform-wars' },
+          { text: 'Community History · Part 1: Campfires, Tieba, and 150,000 Bots', link: '/posts/community-history-campfire-to-reddit' },
           { text: 'Is OpenClaw the Tower of Babel of Our Time?', link: '/posts/openclaw-babel-tower' },
           { text: 'How Long Does OpenClaw\'s Window Last', link: '/posts/openclaw-dividend-period' },
           { text: '\'Mine\' Is a Luxury', link: '/posts/digital-ownership-luxury' },
