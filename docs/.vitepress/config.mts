@@ -102,6 +102,10 @@ export default defineConfig({
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/openclaw-dividend-period.html' }],
 
     // Key articles: Community History Part 4 (en / zh)
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/ai-layoff-trap.html' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/ai-layoff-trap.html' }],
+
+    // Key articles: Community History Part 4 (en / zh)
     ['link', { rel: 'alternate', hreflang: 'en', href: 'https://aaronaust1n.github.io/posts/ghost-town-or-new-frontier.html' }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://aaronaust1n.github.io/zh/posts/ghost-town-or-new-frontier.html' }],
 
@@ -147,6 +151,7 @@ export default defineConfig({
           {
             text: '最近更新',
             items: [
+              { text: 'AI裁员陷阱：理性竞争如何导致集体灾难', link: '/zh/posts/ai-layoff-trap' },
               { text: '社区简史 · 第四篇：鬼城还是新大陆', link: '/zh/posts/ghost-town-or-new-frontier' },
               { text: '社区简史 · 第三篇：Agent社区的黎明', link: '/zh/posts/agent-community-dawn-moltbook' },
               { text: '社区简史 · 第二篇：红海里的地盘战争', link: '/zh/posts/red-ocean-platform-wars' },
@@ -224,6 +229,7 @@ export default defineConfig({
       {
         text: 'Recent Posts',
         items: [
+          { text: 'The AI Layoff Trap: When Rational Competition Leads to Collective Disaster', link: '/posts/ai-layoff-trap' },
           { text: 'Community History · Part 4: Ghost Town or New Frontier', link: '/posts/ghost-town-or-new-frontier' },
           { text: 'Community History · Part 3: The Dawn of Agent Communities', link: '/posts/agent-community-dawn-moltbook' },
           { text: 'Community History · Part 2: Platform Wars in the Red Ocean', link: '/posts/red-ocean-platform-wars' },

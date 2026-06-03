@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Layoff Trap — 论文可视化解读</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070e;--s1:#0f0f1a;--s2:#17172a;--s3:#1e1e34;
+  --bd:rgba(180,170,255,.07);--bd2:rgba(180,170,255,.14);
+  --tx:#e6e2de;--tx2:#9490a0;--tx3:#52506a;
+  --red:#e8435c;--red-bg:rgba(232,67,92,.1);--red-glow:rgba(232,67,92,.25);
+  --amb:#f5a621;--amb-bg:rgba(245,166,33,.1);
+  --tel:#22d9c5;--tel-bg:rgba(34,217,197,.1);
+  --blu:#4d88ff;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'Source Serif 4','Georgia',serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--bd)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 65% 30%,rgba(232,67,92,.1) 0%,transparent 65%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(34,217,197,.05) 0%,transparent 60%);pointer-events:none}
+.hero-inner{padding:0 56px;max-width:1100px}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;color:var(--red);letter-spacing:.18em;text-transform:uppercase;margin-bottom:28px;opacity:.9}
+.hero-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(58px,9vw,110px);font-weight:900;line-height:.95;letter-spacing:-.025em;color:#fff;margin-bottom:36px}
+.hero-title em{color:var(--red);font-style:italic}
+.hero-authors{font-family:'DM Mono',monospace;font-size:12px;color:var(--tx3);letter-spacing:.08em;margin-bottom:36px}
+.hero-thesis{max-width:620px;font-size:19px;font-weight:400;color:var(--tx2);line-height:1.65;border-left:3px solid var(--red);padding-left:22px}
+.hero-thesis strong{color:var(--tx)}
+.hero-tags{margin-top:40px;display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-family:'DM Mono',monospace;font-size:11px;color:var(--tx3);border:1px solid var(--bd2);border-radius:20px;padding:4px 14px;letter-spacing:.05em}
+
+/* ── SECTIONS ── */
+.sec{padding:88px 56px;max-width:1100px;margin:0 auto;border-bottom:1px solid var(--bd)}
+.sec-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--tx3);letter-spacing:.25em;text-transform:uppercase;margin-bottom:10px}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,52px);font-weight:700;line-height:1.15;color:#fff;letter-spacing:-.015em;margin-bottom:14px}
+.sec-sub{font-size:17px;font-weight:400;color:var(--tx2);max-width:560px;line-height:1.6;margin-bottom:52px}
+
+/* ── GRID CARDS ── */
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:28px}
+.card-sm{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:20px 24px}
+
+/* ── STAT BLOCKS ── */
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.stat-block{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:28px;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;line-height:1;letter-spacing:-.02em}
+.stat-label{font-size:13px;color:var(--tx2);line-height:1.5;margin-top:10px}
+
+/* ── EXAMPLE CARDS ── */
+.example{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:24px 28px;margin:16px 0;display:flex;gap:20px;align-items:flex-start}
+.ex-icon{width:44px;height:44px;border-radius:10px;background:var(--red-bg);border:1px solid var(--red-glow);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;margin-top:2px}
+.ex-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--red);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.ex-text{font-size:15px;color:var(--tx2);line-height:1.6}
+.ex-text strong{color:var(--tx)}
+
+/* ── PULLQUOTE ── */
+.pullquote{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,26px);font-style:italic;font-weight:400;color:#fff;line-height:1.5;max-width:640px;margin:52px auto;text-align:center;padding:0 32px;position:relative}
+.pullquote::before{content:'"';position:absolute;top:-16px;left:4px;font-size:72px;color:var(--red);opacity:.35;line-height:1;font-style:normal}
+
+/* ── PRISONER'S DILEMMA ── */
+.pdm-wrap{margin:40px 0;overflow-x:auto}
+.pdm{display:grid;grid-template-columns:130px 1fr 1fr;grid-template-rows:auto 1fr 1fr;gap:3px;background:var(--bd);border-radius:12px;overflow:hidden;min-width:520px}
+.pdm-hdr{background:var(--s2);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--tx3);padding:12px 8px;text-align:center;line-height:1.4}
+.pdm-cell{background:var(--s2);padding:22px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px}
+.pdm-cell.nash{background:var(--red-bg);position:relative}
+.pdm-cell.coop{background:var(--tel-bg)}
+.pdm-payoff{font-family:'DM Mono',monospace;font-size:28px;font-weight:500;line-height:1}
+.pdm-payoff.neg{color:var(--red)}
+.pdm-payoff.pos{color:var(--tel)}
+.pdm-desc{font-size:12px;color:var(--tx3);line-height:1.4}
+.pdm-badge{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border-radius:20px;margin-top:4px;letter-spacing:.05em}
+.badge-nash{background:var(--red);color:#fff}
+.badge-coop{background:var(--tel);color:#000}
+
+/* ── TWO-COL ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.three-col{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
+
+/* ── CONTROLS ── */
+.ctrl-panel{background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:28px}
+.ctrl-group{margin-bottom:26px}
+.ctrl-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.ctrl-lbl{font-family:'DM Mono',monospace;font-size:11px;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase}
+.ctrl-val{font-family:'DM Mono',monospace;font-size:16px;font-weight:500;color:var(--amb)}
+input[type=range]{width:100%;-webkit-appearance:none;height:4px;border-radius:2px;background:var(--s3);outline:none;cursor:pointer;display:block}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--amb);cursor:pointer;transition:transform .15s}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
+.ctrl-hint{font-size:11px;color:var(--tx3);margin-top:5px;font-family:'DM Mono',monospace}
+.stats2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.mini-stat{background:var(--s2);border-radius:8px;padding:14px 16px;border:1px solid var(--bd)}
+.mini-stat .ml{font-family:'DM Mono',monospace;font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.mini-stat .mv{font-family:'DM Mono',monospace;font-size:20px;font-weight:500}
+.wedge-stat{background:var(--s2);border-radius:8px;padding:14px 16px;border:1px solid rgba(232,67,92,.25);margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+.wedge-stat .ml{font-family:'DM Mono',monospace;font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:.1em}
+.wedge-stat .mv{font-family:'DM Mono',monospace;font-size:22px;font-weight:500;color:var(--red)}
+
+/* ── CHART WRAPPERS ── */
+.chart-wrap{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:20px 20px 14px;position:relative}
+.chart-title{font-family:'DM Mono',monospace;font-size:11px;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.chart-h300{height:300px;position:relative}
+.chart-h260{height:260px;position:relative}
+.chart-note{font-size:12px;color:var(--tx3);margin-top:10px;text-align:center;font-family:'DM Mono',monospace}
+
+/* ── EQUATION ── */
+.eq{background:var(--s1);border:1px solid var(--bd);border-left:3px solid var(--amb);border-radius:0 8px 8px 0;padding:20px 28px;font-family:'DM Mono',monospace;font-size:15px;color:var(--amb);margin:28px 0;line-height:1.9}
+
+/* ── POLICY GRID ── */
+.policy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-top:44px}
+.pol-card{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:22px;position:relative;overflow:hidden;transition:transform .2s}
+.pol-card:hover{transform:translateY(-2px)}
+.pol-card.pass{border-color:rgba(34,217,197,.35);background:linear-gradient(140deg,var(--tel-bg),var(--s1))}
+.pol-card.part{border-color:rgba(245,166,33,.3);background:linear-gradient(140deg,var(--amb-bg),var(--s1))}
+.pol-card.fail{opacity:.72}
+.pol-icon{font-size:26px;margin-bottom:10px}
+.pol-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;margin-bottom:7px}
+.pol-desc{font-size:13px;color:var(--tx2);line-height:1.55;margin-bottom:14px}
+.verdict{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:11px;padding:3px 12px;border-radius:20px;letter-spacing:.05em}
+.v-fail{background:var(--red-bg);color:var(--red);border:1px solid rgba(232,67,92,.3)}
+.v-part{background:var(--amb-bg);color:var(--amb);border:1px solid rgba(245,166,33,.3)}
+.v-pass{background:var(--tel-bg);color:var(--tel);border:1px solid rgba(34,217,197,.35)}
+.eff-bar{height:3px;background:var(--s3);border-radius:2px;margin-top:10px;overflow:hidden}
+.eff-fill{height:100%;border-radius:2px}
+
+/* ── SOLUTION BOX ── */
+.sol-box{background:var(--tel-bg);border:1px solid rgba(34,217,197,.3);border-radius:14px;padding:32px;margin-top:36px}
+.sol-box .eq{border-left-color:var(--tel);color:var(--tel);background:var(--s1)}
+
+/* ── TAKEAWAYS ── */
+.takeaways{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.tw{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:26px}
+.tw-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:rgba(255,255,255,.06);line-height:1;margin-bottom:10px}
+.tw h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.3}
+.tw p{font-size:14px;color:var(--tx2);line-height:1.6}
+
+/* ── FOOTER ── */
+footer{padding:40px 56px;text-align:center;border-top:1px solid var(--bd);font-family:'DM Mono',monospace;font-size:11px;color:var(--tx3);letter-spacing:.05em;line-height:1.8}
+
+/* ── FADE IN ── */
+.fi{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.fi.on{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .hero-inner,.sec{padding:0 24px}
+  .hero-inner{padding-bottom:0}
+  .hero{padding-bottom:60px}
+  .sec{padding-top:64px;padding-bottom:64px}
+  .stats3,.two-col,.three-col,.takeaways{grid-template-columns:1fr}
+  .pdm{grid-template-columns:90px 1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ────────── HERO ────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Wharton School Research Paper · arXiv:2603.20617 · March 2026</div>
+    <h1 class="hero-title">The <em>AI</em><br>Layoff<br>Trap</h1>
+    <div class="hero-authors">Brett Hemenway Falk (University of Pennsylvania) &amp; Gerry Tsoukalas (Boston University)</div>
+    <p class="hero-thesis">
+      当AI裁员速度超过经济吸纳能力时，将侵蚀企业赖以生存的消费需求。<br>
+      <strong>即便理性的企业完全预见到这一灾难，竞争压力也让它们无法停下。</strong>
+    </p>
+    <div class="hero-tags">
+      <span class="tag">博弈论</span>
+      <span class="tag">需求外部性</span>
+      <span class="tag">市场失灵</span>
+      <span class="tag">自动化经济学</span>
+      <span class="tag">庇古税</span>
+      <span class="tag">任务型模型</span>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── S1 核心问题 ────────── -->
+<section class="sec fi">
+  <div class="sec-num">01 · 核心问题</div>
+  <h2 class="sec-title">陷阱已在眼前<br>企业为何仍在奔跑？</h2>
+  <p class="sec-sub">2026年现实中，大规模AI裁员正在发生——尽管首席执行官们清楚地看到了集体后果</p>
+
+  <div class="example">
+    <div class="ex-icon">⚡</div>
+    <div>
+      <div class="ex-label">真实案例 · 2026年2月</div>
+      <p class="ex-text">Block (Square / Cash App 母公司) 裁员近半——从 <strong>10,000 人缩减至 6,000 人</strong>。CEO Jack Dorsey 称 AI 已使这些职位"没有必要"，并预言"<strong>一年内，大多数公司都将得出同样的结论</strong>"。</p>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="ex-icon">🤖</div>
+    <div>
+      <div class="ex-label">规模参考</div>
+      <p class="ex-text">Salesforce 用 AI 替代了 <strong>4,000 名客服代理</strong>；Devin AI 在高盛等公司部署后，<strong>一名工程师可完成原本五人团队的工作</strong>。2025年超过 10 万科技工人被裁员，其中超过一半明确归因于 AI。</p>
+    </div>
+  </div>
+
+  <div class="stats3" style="margin-top:36px">
+    <div class="stat-block">
+      <div class="stat-num" style="color:var(--red)">100k+</div>
+      <div class="stat-label">2025年科技行业裁员人数<br>超过一半直接归因于AI</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" style="color:var(--amb)">80%</div>
+      <div class="stat-label">美国工人持有的职位<br>有任务可被LLM自动化</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" style="color:var(--tel)">0</div>
+      <div class="stat-label">在竞争市场中<br>企业自发克制的动机</div>
+    </div>
+  </div>
+
+  <div class="pullquote fi">
+    理性的、有先见之明的企业本应是刹车；如果悬崖对所有人都清晰可见，它们为何仍会竞相奔赴？
+  </div>
+</section>
+
+<!-- ────────── S2 博弈机制 ────────── -->
+<section class="sec fi">
+  <div class="sec-num">02 · 博弈机制</div>
+  <h2 class="sec-title">自动化军备竞赛<br>是一场囚徒困境</h2>
+  <p class="sec-sub">每家企业的自动化是严格占优策略——个体理性导致集体灾难，且无论竞争对手如何选择都成立</p>
+
+  <div class="pdm-wrap">
+    <div class="pdm">
+      <!-- Headers -->
+      <div class="pdm-hdr" style="background:transparent"></div>
+      <div class="pdm-hdr">竞争对手：<br><strong style="color:#fff">自动化</strong></div>
+      <div class="pdm-hdr">竞争对手：<br><strong style="color:#fff">克制</strong></div>
+      <!-- Row 1: I automate -->
+      <div class="pdm-hdr" style="justify-content:flex-end;padding-right:16px">我方：<br><strong style="color:#fff">自动化</strong></div>
+      <div class="pdm-cell nash">
+        <div class="pdm-payoff neg">−2, −2</div>
+        <div class="pdm-desc">双方都自动化<br>消费需求崩塌<br>双方利润均受损</div>
+        <span class="pdm-badge badge-nash">← 纳什均衡（实际结局）</span>
+      </div>
+      <div class="pdm-cell">
+        <div class="pdm-payoff pos">+3, −5</div>
+        <div class="pdm-desc">我方抢占市场份额<br>竞争对手被淘汰</div>
+      </div>
+      <!-- Row 2: I restrain -->
+      <div class="pdm-hdr" style="justify-content:flex-end;padding-right:16px">我方：<br><strong style="color:#fff">克制</strong></div>
+      <div class="pdm-cell">
+        <div class="pdm-payoff neg">−5, +3</div>
+        <div class="pdm-desc">我方被市场淘汰<br>竞争对手获益</div>
+      </div>
+      <div class="pdm-cell coop">
+        <div class="pdm-payoff pos">+5, +5</div>
+        <div class="pdm-desc">双方利润最优<br>消费需求健康</div>
+        <span class="pdm-badge badge-coop">合作最优（无法自发实现）</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:32px">
+    <div class="card">
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--red);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">需求外部性</div>
+      <p style="font-size:15px;color:var(--tx2);line-height:1.65">
+        每家企业获得自动化的<strong style="color:var(--tx)">全部成本节约</strong>，但在竞争定价下，只承担总体需求破坏的 <strong style="color:var(--tx)">1/N</strong>。其余 (N−1)/N 的损失落在竞争对手身上——外部化给整个行业。
+      </p>
+    </div>
+    <div class="card">
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amb);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">为何先见之明不够</div>
+      <p style="font-size:15px;color:var(--tx2);line-height:1.65">
+        自动化是<strong style="color:var(--tx)">严格占优策略</strong>：无论竞争对手如何选择，自动化总是最优回应。即使 CEO 看见了悬崖，竞争对手在追赶，他无法踩刹车——
+        <strong style="color:var(--tx)">先见不是缺失的要素，缺失的是约束机制</strong>。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── S3 互动演示 ────────── -->
+<section class="sec fi">
+  <div class="sec-num">03 · 互动演示</div>
+  <h2 class="sec-title">市场越分散<br>过度自动化越严重</h2>
+  <p class="sec-sub">垄断者完全内化外部性（不过度自动化），而完全竞争市场将外部性完全外化——调节下方参数查看</p>
+
+  <div class="three-col">
+    <div class="ctrl-panel">
+      <div class="ctrl-group">
+        <div class="ctrl-row">
+          <span class="ctrl-lbl">企业数量 N</span>
+          <span class="ctrl-val" id="vN">5</span>
+        </div>
+        <input type="range" id="rN" min="1" max="20" value="5" step="1">
+        <div class="ctrl-hint">1 = 垄断 → ∞ = 完全竞争</div>
+      </div>
+      <div class="ctrl-group">
+        <div class="ctrl-row">
+          <span class="ctrl-lbl">AI节约系数 s</span>
+          <span class="ctrl-val" id="vS">0.60</span>
+        </div>
+        <input type="range" id="rS" min="0.15" max="1.0" value="0.60" step="0.05">
+        <div class="ctrl-hint">每个自动化任务的单位成本节约</div>
+      </div>
+      <div class="ctrl-group">
+        <div class="ctrl-row">
+          <span class="ctrl-lbl">需求损失系数 ℓ</span>
+          <span class="ctrl-val" id="vL">0.40</span>
+        </div>
+        <input type="range" id="rL" min="0.05" max="0.70" value="0.40" step="0.05">
+        <div class="ctrl-hint">每个被替代工人的消费损失</div>
+      </div>
+      <div class="stats2">
+        <div class="mini-stat">
+          <div class="ml">社会最优</div>
+          <div class="mv" id="mOpt" style="color:var(--tel)">10%</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ml">市场均衡</div>
+          <div class="mv" id="mEq" style="color:var(--red)">26%</div>
+        </div>
+      </div>
+      <div class="wedge-stat">
+        <div class="ml">过度自动化楔形</div>
+        <div class="mv" id="mWedge">+16pp</div>
+      </div>
+    </div>
+    <div>
+      <div class="chart-wrap">
+        <div class="chart-title">过度自动化楔形随企业数量 N 变化</div>
+        <div class="chart-h300">
+          <canvas id="cWedge" role="img" aria-label="均衡与最优自动化率随N变化的折线图">折线图：均衡自动化率（红色）与最优自动化率（绿色虚线）随企业数量N增加的变化趋势</canvas>
+        </div>
+        <div class="chart-note">当前N用 ● 标记 · 红线趋近最大楔形 ℓ/k，永远无法消除</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="eq" style="margin-top:40px">
+    过度自动化楔形 = α_均衡 − α_最优 = <span style="color:#fff">ℓ · (1 − 1/N) / k</span><br>
+    <span style="font-size:13px;color:var(--tx3)">N=1 (垄断): 楔形=0 · N→∞ (完全竞争): 楔形→ℓ/k (最大值)</span>
+  </div>
+</section>
+
+<!-- ────────── S4 红皇后效应 ────────── -->
+<section class="sec fi">
+  <div class="sec-num">04 · 红皇后效应</div>
+  <h2 class="sec-title">"更好"的AI<br>反而深化了陷阱</h2>
+  <p class="sec-sub">更强的AI生产力在均衡点将市场份额收益互相抵消，只留下更大的需求破坏</p>
+
+  <div class="two-col">
+    <div>
+      <p style="font-size:16px;color:var(--tx2);line-height:1.7;margin-bottom:20px">
+        在标准经济模型中：更好的工具 → 更多财富。<br>
+        在AI裁员陷阱中：更好的工具 → <strong style="color:var(--tx)">只是加速了军备竞赛</strong>。
+      </p>
+      <p style="font-size:16px;color:var(--tx2);line-height:1.7;margin-bottom:20px">
+        当AI能力提升（φ &gt; 1）时，每家企业认为通过比竞争对手自动化更多任务可获得更大市场份额。这在基线需求外部性之上<strong style="color:var(--tx)">增加了第二层扭曲</strong>——市场份额争夺动机。
+      </p>
+      <div class="eq">
+        楔形(φ) ∝ φ · ℓ · (1 − 1/N)<br>
+        <span style="font-size:13px;color:var(--tx3)">φ↑ (更强的AI) ⟹ 楔形↑ (更大的过度自动化)</span>
+      </div>
+      <div class="card-sm" style="margin-top:20px">
+        <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--amb);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">红皇后悖论</div>
+        <p style="font-size:14px;color:var(--tx2);line-height:1.6">对称均衡中——所有人都采用了同样"更好"的AI——市场份额收益<strong style="color:var(--tx)">完全相互抵消</strong>。企业的相对份额与开始时相同，但已自动化更多任务，消费需求总量进一步萎缩。企业为保持相对位置而跑得更快，地基却在脚下不断侵蚀。</p>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-title">AI生产力 φ 与过度自动化楔形关系</div>
+      <div class="chart-h260">
+        <canvas id="cRQ" role="img" aria-label="红皇后效应折线图：AI生产力提升反而扩大过度自动化楔形">折线图：随AI生产力系数φ增加，过度自动化楔形（pp单位）持续扩大</canvas>
+      </div>
+      <div class="chart-note">φ=1 为基准（AI仅节约成本）· φ&gt;1 为AI同时提升产出</div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── S5 政策分析 ────────── -->
+<section class="sec fi">
+  <div class="sec-num">05 · 政策分析</div>
+  <h2 class="sec-title">六种政策工具<br>只有一种真正管用</h2>
+  <p class="sec-sub">常见政策解决的是自动化的症状，而非驱动竞争自动化的边际激励机制</p>
+
+  <div class="policy-grid">
+    <div class="pol-card fail">
+      <div class="pol-icon">💸</div>
+      <div class="pol-name">全民基本收入 (UBI)</div>
+      <div class="pol-desc">为工人提供收入兜底，但不改变CEO的边际计算。机器人仍比人类便宜，裁员激励不变。UBI改变了利润<em>水平</em>，不改变利润<em>差值</em>——而差值才驱动策略行为。</div>
+      <span class="verdict v-fail">✗ 无效</span>
+      <div class="eff-bar"><div class="eff-fill" style="width:0%;background:var(--red)"></div></div>
+    </div>
+
+    <div class="pol-card fail">
+      <div class="pol-icon">📊</div>
+      <div class="pol-name">资本收入税</div>
+      <div class="pol-desc">对总利润按比例课税，相当于将整个利润函数等比缩放，在企业最优化条件中完全自我抵消。税收不影响"再自动化一个任务是否合算"的边际判断。</div>
+      <span class="verdict v-fail">✗ 无效</span>
+      <div class="eff-bar"><div class="eff-fill" style="width:0%;background:var(--red)"></div></div>
+    </div>
+
+    <div class="pol-card fail">
+      <div class="pol-icon">🤝</div>
+      <div class="pol-name">Coasian 自愿协议</div>
+      <div class="pol-desc">企业间或企业与工人的自愿克制协议。但由于自动化是严格占优策略，任何无约束力的自愿协议都无法自我执行——总有一方有动机单方面偏离。</div>
+      <span class="verdict v-fail">✗ 无效</span>
+      <div class="eff-bar"><div class="eff-fill" style="width:0%;background:var(--red)"></div></div>
+    </div>
+
+    <div class="pol-card part">
+      <div class="pol-icon">🎓</div>
+      <div class="pol-name">技能再培训</div>
+      <div class="pol-desc">提高收入替代率 η，减少每个被替代工人带来的净需求损失 ℓ = λ(1−η)w。能缩小楔形，但无法完全消除——除非 η=1（完全再就业），在实践中不可能实现。</div>
+      <span class="verdict v-part">◑ 部分有效</span>
+      <div class="eff-bar"><div class="eff-fill" style="width:40%;background:var(--amb)"></div></div>
+    </div>
+
+    <div class="pol-card part">
+      <div class="pol-icon">📈</div>
+      <div class="pol-name">工人股权参与</div>
+      <div class="pol-desc">让工人分享利润，将资本收入导向边际消费倾向更高的群体（工人比股东消费更多）。部分有效，但受消费泄漏限制——工人也会储蓄，无法完全弥补工资损失。</div>
+      <span class="verdict v-part">◑ 部分有效</span>
+      <div class="eff-bar"><div class="eff-fill" style="width:35%;background:var(--amb)"></div></div>
+    </div>
+
+    <div class="pol-card pass">
+      <div class="pol-icon">🎯</div>
+      <div class="pol-name">庇古自动化税</div>
+      <div class="pol-desc">对每个自动化任务按其边际外部成本课税，强制企业"支付"它本会外部化给竞争对手的需求破坏代价。直接作用于外部性产生的边际——唯一能完全矫正陷阱的工具。</div>
+      <span class="verdict v-pass">✓ 完全有效</span>
+      <div class="eff-bar"><div class="eff-fill" style="width:100%;background:var(--tel)"></div></div>
+    </div>
+  </div>
+
+  <div class="sol-box">
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--tel);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">最优庇古税率</div>
+    <div class="eq">
+      τ* = ℓ · (1 − 1/N)<br>
+      <span style="color:var(--tx2);font-size:13px">其中 ℓ = λ(1−η)w 是每个被替代工人的净需求损失，N 为市场内企业数量</span>
+    </div>
+    <p style="font-size:15px;color:var(--tx2);line-height:1.65;margin-top:12px">
+      <strong style="color:var(--tel)">自我收缩特性：</strong>若税收收入再投资于职业培训（使 η 提高），则需求损失 ℓ 自动减小，所需税率随之降低趋近于零。该税不是要阻止进步，而是作为"调速器"——
+      确保自动化速度不超过经济重新吸纳工人的速度。
+    </p>
+  </div>
+</section>
+
+<!-- ────────── S6 结论 ────────── -->
+<section class="sec fi" style="border-bottom:none">
+  <div class="sec-num">06 · 核心结论</div>
+  <h2 class="sec-title">三个无法回避的推论</h2>
+  <p class="sec-sub">论文的政策含义超越了传统的"应对失业"框架</p>
+
+  <div class="takeaways">
+    <div class="tw">
+      <div class="tw-num">01</div>
+      <h3>预见悬崖并不足够</h3>
+      <p>即使企业对集体后果拥有完全信息，竞争压力仍强制它们自动化。理性与先见之明是必要条件，不是充分条件——缺失的是强制约束机制。</p>
+    </div>
+    <div class="tw">
+      <div class="tw-num">02</div>
+      <h3>损失是净社会净损失</h3>
+      <p>这不是从工人到资本方的财富再分配。过度自动化造成的超额损失同时伤害工人和企业主，是真正意义上的社会净损失（deadweight loss）。</p>
+    </div>
+    <div class="tw">
+      <div class="tw-num">03</div>
+      <h3>政策需攻击激励根源</h3>
+      <p>政策不应只关注 AI 劳动力替代的<em>后果</em>（如失业救助），更要应对驱动它的<em>竞争激励本身</em>。庇古税是唯一矫正根源的工具。</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:36px;display:flex;gap:24px;align-items:flex-start">
+    <div style="font-size:32px;flex-shrink:0">📄</div>
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--tx3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px">论文信息</div>
+      <p style="font-size:15px;color:var(--tx2);line-height:1.6">Brett Hemenway Falk &amp; Gerry Tsoukalas, <em>"The AI Layoff Trap"</em>, The Wharton School Research Paper, arXiv:2603.20617, March 2026.<br>
+      <span style="color:var(--tx3)">→ arxiv.org/abs/2603.20617 &nbsp;|&nbsp; ssrn.com/abstract=6448898</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ────────── FOOTER ────────── -->
+<footer>
+  <p>可视化解读由 Claude 制作 · 内容基于论文原文，仅供学习参考</p>
+  <p style="margin-top:4px;opacity:.5">Brett Hemenway Falk &amp; Gerry Tsoukalas · "The AI Layoff Trap" · arXiv:2603.20617 · March 2026</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+// ── SCROLL FADE ──
+const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }), {threshold:.08});
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+// ── COMMON CHART OPTIONS ──
+const GRD = 'rgba(180,170,255,.05)';
+const TX3 = '#52506a';
+const txOpts = { color:TX3, font:{size:11, family:"'DM Mono',monospace"} };
+
+// ── WEDGE CHART ──
+const wedgeCtx = document.getElementById('cWedge').getContext('2d');
+let wedgeChart = null;
+const k = 2; // friction coefficient
+
+function clamp01(v){ return Math.min(1, Math.max(0, v)); }
+function alphaOpt(s, l){ return clamp01((s - l) / k); }
+function alphaEq(s, l, n){ return clamp01((s - l/n) / k); }
+function wedge(s, l, n){ return Math.max(0, alphaEq(s,l,n) - alphaOpt(s,l)); }
+
+function buildWedgeData(s, l, curN) {
+  const ns = Array.from({length:20}, (_,i)=>i+1);
+  return {
+    labels: ns.map(n=>'N='+n),
+    datasets: [
+      {
+        label:'均衡自动化率 α*',
+        data: ns.map(n => Math.round(alphaEq(s,l,n)*1000)/10),
+        borderColor:'#e8435c',
+        backgroundColor:'rgba(232,67,92,.12)',
+        fill:false, tension:.35, borderWidth:2,
+        pointRadius: ns.map(n=> n===curN ? 7 : 2.5),
+        pointBackgroundColor: ns.map(n=> n===curN ? '#e8435c' : 'rgba(232,67,92,.5)'),
+        pointBorderColor: ns.map(n=> n===curN ? '#fff' : 'transparent'),
+        pointBorderWidth: ns.map(n=> n===curN ? 1.5 : 0),
+      },
+      {
+        label:'社会最优 α_opt',
+        data: ns.map(n => Math.round(alphaOpt(s,l)*1000)/10),
+        borderColor:'#22d9c5',
+        borderDash:[7,5],
+        fill:false, tension:0, borderWidth:1.5,
+        pointRadius:0,
+      }
+    ]
+  };
+}
+
+function initWedgeChart(s, l, curN) {
+  if (wedgeChart) { wedgeChart.destroy(); wedgeChart = null; }
+  wedgeChart = new Chart(wedgeCtx, {
+    type:'line',
+    data: buildWedgeData(s,l,curN),
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      interaction:{mode:'index', intersect:false},
+      scales:{
+        x:{ ticks:{...txOpts, maxTicksLimit:10, maxRotation:0}, grid:{color:GRD} },
+        y:{ ticks:{...txOpts, callback:v=>v+'%'}, grid:{color:GRD},
+            title:{display:true, text:'自动化率 (%)', color:TX3, font:{size:10,family:"'DM Mono',monospace"}} }
+      },
+      plugins:{
+        legend:{display:true, position:'top', labels:{color:TX3, font:{size:10,family:"'DM Mono',monospace"}, boxWidth:14, padding:10}},
+        tooltip:{ callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.parsed.y.toFixed(1)+'%'} }
+      }
+    }
+  });
+}
+
+function updateStats(s, l, n) {
+  const aOpt = Math.round(alphaOpt(s,l)*100);
+  const aEq = Math.round(alphaEq(s,l,n)*100);
+  const w = Math.max(0, aEq - aOpt);
+  document.getElementById('mOpt').textContent = aOpt+'%';
+  document.getElementById('mEq').textContent  = aEq+'%';
+  document.getElementById('mWedge').textContent = (w>0?'+':'')+w+'pp';
+}
+
+function updateWedge() {
+  const n = +document.getElementById('rN').value;
+  const s = +document.getElementById('rS').value;
+  const l = +document.getElementById('rL').value;
+  document.getElementById('vN').textContent = n;
+  document.getElementById('vS').textContent = s.toFixed(2);
+  document.getElementById('vL').textContent = l.toFixed(2);
+  initWedgeChart(s, l, n);
+  updateStats(s, l, n);
+}
+
+['rN','rS','rL'].forEach(id => document.getElementById(id).addEventListener('input', updateWedge));
+updateWedge();
+
+// ── RED QUEEN CHART ──
+(function(){
+  const s0=0.6, l0=0.4, N=5;
+  const phis = [0.5,0.75,1.0,1.25,1.5,1.75,2.0,2.5,3.0];
+
+  function rqWedge(phi) {
+    // With productivity phi, effective cost saving = s*phi
+    // but optimal also increases: alpha_opt_phi = (s*phi - l)/k
+    // equilibrium: alpha_eq_phi = (s*phi - l/N)/k
+    // wedge = l*(1-1/N)/k * phi (scales with phi due to market-share motive)
+    const s_eff = s0 * phi;
+    return Math.max(0, alphaEq(s_eff,l0,N) - alphaOpt(s_eff,l0));
+  }
+
+  new Chart(document.getElementById('cRQ').getContext('2d'), {
+    type:'line',
+    data:{
+      labels: phis.map(p=>'φ='+p),
+      datasets:[{
+        label:'过度自动化楔形',
+        data: phis.map(p=>Math.round(rqWedge(p)*1000)/10),
+        borderColor:'#f5a621',
+        backgroundColor:'rgba(245,166,33,.12)',
+        fill:true, tension:.4, borderWidth:2.5,
+        pointRadius:5, pointBackgroundColor:'#f5a621',
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      scales:{
+        x:{ ticks:{...txOpts}, grid:{color:GRD},
+            title:{display:true, text:'AI生产力系数 φ', color:TX3, font:{size:10,family:"'DM Mono',monospace"}} },
+        y:{ ticks:{...txOpts, callback:v=>v+'pp'}, grid:{color:GRD},
+            title:{display:true, text:'过度自动化楔形 (pp)', color:TX3, font:{size:10,family:"'DM Mono',monospace"}} }
+      },
+      plugins:{
+        legend:{display:false},
+        tooltip:{ callbacks:{label:ctx=>'楔形: '+ctx.parsed.y.toFixed(1)+'pp'} }
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
