@@ -29,6 +29,18 @@ npm run docs:preview
 
 Do not hand-edit generated files under `docs/public/museum/`; always replace them from the museum source.
 
+### Museum English layer & handbooks / 博物馆英文化与手册
+
+- English lives in `docs/public/museum-i18n/` (outside the museum folder, so museum updates never wipe it):
+  - `outline-i18n.js` — runtime layer: language detection, data merge, UI text/attribute translation.
+  - `en.00.ui.js` — interface dictionary, patterns and department names.
+  - `en.<n>.<category>.js` — per-department exhibit translations (13 files).
+- `npm run generate:stats` also:
+  - re-injects the language layer and site-nav into `docs/public/museum/index.html` (idempotent, picks up new `en.*.js` parts automatically);
+  - regenerates both handbooks: `handbook-183-en.md` (generated English edition) and `handbook-183-zh.md` (original Chinese).
+- The museum download button serves the edition matching the interface language; the other edition is linked beside it. Untranslated strings fall back to Chinese gracefully.
+- Language is inferred from the referring page, then the browser language, and can be forced with `?lang=en` / `?lang=zh`.
+
 ### Adding a post / 发新文章
 
 Add `docs/posts/<slug>.md` (EN) and `docs/zh/posts/<slug>.md` (ZH) with frontmatter `title`, `date`, `description`, `tags` (optional `image`). Sidebar, hreflang pairs and sitemap are generated from the files. Bilingual parity is expected.

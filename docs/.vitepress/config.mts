@@ -86,6 +86,27 @@ export default defineConfig({
   description: "A Personal Blog, record my thoughts and ideas, and share my knowledge and experiences. Wait for the world to be rebuilt by AGI. And save a copy for myself.",
   lastUpdated: true,
 
+  vite: {
+    plugins: [
+      {
+        // GitHub Pages serves docs/public/museum/index.html for /museum/, but
+        // the Vite dev server falls back to the SPA shell. Rewrite the
+        // directory request so the standalone museum previews locally too.
+        name: 'museum-directory-index',
+        apply: 'serve',
+        configureServer(server) {
+          server.middlewares.use((req, _res, next) => {
+            const url = req.url?.split('?')[0]
+            if (url === '/museum' || url === '/museum/') {
+              req.url = '/museum/index.html'
+            }
+            next()
+          })
+        }
+      }
+    ]
+  },
+
   // Per-page SEO: canonical, hreflang pairs for this page only, and richer
   // Open Graph / Twitter tags (previously every page carried 40 site-wide
   // alternate links and a large_image card without any image).

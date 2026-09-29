@@ -23,165 +23,99 @@ const reduceMotion =
   window.matchMedia &&
   window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
+/*
+ * Same rendering as the museum's featured hero (app.js `featured-flow`):
+ * a grid of short tangential strokes twisted around a rotating centre.
+ */
+function renderField(ctx, width, height, t, pointer) {
+  ctx.fillStyle = '#17251f'
+  ctx.fillRect(0, 0, width, height)
+
+  const cx = width * 0.52 + pointer.nx * width * 0.1
+  const cy = height * 0.47 + pointer.ny * height * 0.1
+  const step = Math.max(8, width / 55)
+
+  ctx.save()
+  ctx.translate(cx, cy)
+  ctx.rotate(-0.25)
+  const sx = width * 0.4
+  const sy = height * 0.37
+  for (let x = -sx; x < sx; x += step) {
+    for (let y = -sy; y < sy; y += step) {
+      const nx = x / sx
+      const ny = y / sy
+      const d = Math.hypot(nx, ny)
+      if (d > 1.06) continue
+      const q = Math.atan2(ny, nx)
+      const twist = q + Math.sin(d * 6 - t * 0.22) * 1.1
+      const px = x + Math.cos(twist) * 18 * (1 - d)
+      const py = y + Math.sin(twist) * 18
+      const fade = Math.max(0, Math.min(1, (1.1 - d) * 3))
+      ctx.strokeStyle = `hsla(${75 + Math.sin(q + t * 0.07) * 15} 52% ${
+        55 + (1 - d) * 19
+      }% / ${fade * 0.8})`
+      ctx.lineWidth = 0.8
+      const len = step * (0.65 + Math.sin(d * 8) * 0.35)
+      ctx.beginPath()
+      ctx.moveTo(px - (Math.cos(twist) * len) / 2, py - (Math.sin(twist) * len) / 2)
+      ctx.lineTo(px + (Math.cos(twist) * len) / 2, py + (Math.sin(twist) * len) / 2)
+      ctx.stroke()
+    }
+  }
+  ctx.restore()
+}
+
 onMounted(() => {
   const el = canvas.value
   if (!el) return
   const ctx = el.getContext('2d')
+  const pointer = { nx: 0, ny: 0 }
   let width = 0
   let height = 0
-  let dpr = 1
-  let particles = []
-  const pointer = { x: -9999, y: -9999, active: false }
+  let t = 1.2
+
+  const paint = () => renderField(ctx, width, height, t, pointer)
 
   const resize = () => {
     const rect = el.getBoundingClientRect()
-    dpr = Math.min(window.devicePixelRatio || 1, 2)
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
     width = Math.max(rect.width, 1)
     height = Math.max(rect.height, 1)
     el.width = Math.floor(width * dpr)
     el.height = Math.floor(height * dpr)
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-    ctx.fillStyle = '#151f1c'
-    ctx.fillRect(0, 0, width, height)
+    paint()
   }
 
-  const spawn = () => {
-    const count = Math.round((width * height) / 14000)
-    particles = Array.from({ length: Math.min(Math.max(count, 60), 220) }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: 0,
-      vy: 0,
-      life: Math.random() * 240
-    }))
-  }
-
-  const onMove = (e) => {
+  const onMove = (event) => {
     const rect = el.getBoundingClientRect()
-    pointer.x = e.clientX - rect.left
-    pointer.y = e.clientY - rect.top
-    pointer.active = true
+    pointer.nx = ((event.clientX - rect.left) / rect.width) * 2 - 1
+    pointer.ny = ((event.clientY - rect.top) / rect.height) * 2 - 1
+    if (reduceMotion) paint()
   }
+
   const onLeave = () => {
-    pointer.active = false
-    pointer.x = -9999
-    pointer.y = -9999
+    pointer.nx = 0
+    pointer.ny = 0
+    if (reduceMotion) paint()
   }
 
-  let t = 0
-  const draw = () => {
-    t += 0.004
-    ctx.fillStyle = 'rgba(21, 31, 28, 0.045)'
-    ctx.fillRect(0, 0, width, height)
-    ctx.lineCap = 'round'
-
-    for (const p of particles) {
-      const nx = p.x / width
-      const ny = p.y / height
-      const angle =
-        Math.sin(nx * 3.1 + t) * 1.6 +
-        Math.cos(ny * 3.4 - t * 1.3) * 1.6 +
-        Math.sin((nx + ny) * 2.2 + t * 0.7) * 0.8
-
-      p.vx += Math.cos(angle) * 0.16
-      p.vy += Math.sin(angle) * 0.16
-
-      if (pointer.active) {
-        const dx = p.x - pointer.x
-        const dy = p.y - pointer.y
-        const d2 = dx * dx + dy * dy
-        if (d2 < 16000 && d2 > 0.01) {
-          const f = 34 / d2
-          p.vx += dx * f
-          p.vy += dy * f
-        }
-      }
-
-      p.vx *= 0.94
-      p.vy *= 0.94
-      const px = p.x
-      const py = p.y
-      p.x += p.vx
-      p.y += p.vy
-      p.life += 1
-
-      const speed = Math.min(Math.hypot(p.vx, p.vy) / 3, 1)
-      const alpha = pointer.active ? 0.55 : 0.32
-      ctx.strokeStyle = `rgba(${196 + speed * 20}, ${224 - speed * 30}, ${168}, ${alpha})`
-      ctx.lineWidth = 0.7 + speed * 0.9
-      ctx.beginPath()
-      ctx.moveTo(px, py)
-      ctx.lineTo(p.x, p.y)
-      ctx.stroke()
-
-      if (
-        p.x < -20 ||
-        p.x > width + 20 ||
-        p.y < -20 ||
-        p.y > height + 20 ||
-        p.life > 620
-      ) {
-        p.x = Math.random() * width
-        p.y = Math.random() * height
-        p.vx = 0
-        p.vy = 0
-        p.life = 0
-      }
-    }
-
-    if (!reduceMotion) {
-      raf = requestAnimationFrame(draw)
-    }
-  }
-
-  const onResize = () => {
-    resize()
-    spawn()
-    if (reduceMotion) drawStatic()
-  }
-
-  // Static, full-length render of the field for users who prefer reduced motion.
-  const drawStatic = () => {
-    ctx.fillStyle = '#151f1c'
-    ctx.fillRect(0, 0, width, height)
-    ctx.lineCap = 'round'
-    const t0 = 0.6
-    const step = Math.max(14, Math.min(width, height) / 34)
-    for (let x = step / 2; x < width; x += step) {
-      for (let y = step / 2; y < height; y += step) {
-        const nx = x / width
-        const ny = y / height
-        const angle =
-          Math.sin(nx * 3.1 + t0) * 1.6 +
-          Math.cos(ny * 3.4 - t0 * 1.3) * 1.6 +
-          Math.sin((nx + ny) * 2.2 + t0 * 0.7) * 0.8
-        const len = step * 0.72
-        ctx.strokeStyle = `rgba(196, 224, 168, 0.42)`
-        ctx.lineWidth = 0.8
-        ctx.beginPath()
-        ctx.moveTo(x - Math.cos(angle) * len * 0.5, y - Math.sin(angle) * len * 0.5)
-        ctx.lineTo(x + Math.cos(angle) * len * 0.5, y + Math.sin(angle) * len * 0.5)
-        ctx.stroke()
-      }
-    }
+  const loop = () => {
+    t += 0.016
+    paint()
+    raf = requestAnimationFrame(loop)
   }
 
   resize()
-  spawn()
+  if (!reduceMotion) loop()
 
-  if (reduceMotion) {
-    drawStatic()
-  } else {
-    draw()
-  }
-
-  window.addEventListener('resize', onResize)
+  window.addEventListener('resize', resize)
   el.addEventListener('pointermove', onMove)
   el.addEventListener('pointerleave', onLeave)
 
   cleanup = () => {
     cancelAnimationFrame(raf)
-    window.removeEventListener('resize', onResize)
+    window.removeEventListener('resize', resize)
     el.removeEventListener('pointermove', onMove)
     el.removeEventListener('pointerleave', onLeave)
   }

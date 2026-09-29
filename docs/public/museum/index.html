@@ -13,6 +13,9 @@
     <link rel="canonical" href="https://aaronaust1n.github.io/museum/" />
     <link rel="stylesheet" href="src/style.css">
 <link rel="stylesheet" href="src/effects.css">
+      <!-- OUTLINE SITE NAV START -->
+    <style>.site-nav{display:flex;align-items:center;gap:6px;margin-right:16px;padding-right:16px;border-right:1px solid var(--line)}.site-link{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:4px;padding:5px 9px;font-size:10px;line-height:1;color:var(--muted);background:var(--bg);white-space:nowrap;transition:color .2s,border-color .2s,background .2s}.site-link:hover{color:var(--accent);border-color:var(--accent);background:var(--soft)}.site-nav[data-lang='en'] .site-link-zh{display:none}.site-nav[data-lang='zh'] .site-link-en{display:none}@media(max-width:700px){.site-nav{margin-right:8px;padding-right:8px;gap:4px}.site-link{padding:4px 7px;font-size:9px}}</style>
+    <!-- OUTLINE SITE NAV END -->
   </head>
   <body>
     <a class="skip" href="#collection">跳到展品</a>
@@ -56,6 +59,14 @@
           ><span>数字游园</span><span class="slash">/</span><b>交互与视觉博物馆</b>
         </div>
         <div class="top-actions">
+      <!-- OUTLINE SITE NAV START -->
+      <nav class="site-nav" aria-label="返回主站 Back to site" data-lang="zh">
+      <a class="site-link site-link-zh" href="/zh/">主页</a>
+      <a class="site-link site-link-zh" href="/zh/posts/">博客</a>
+      <a class="site-link site-link-en" href="/">Home</a>
+      <a class="site-link site-link-en" href="/posts/">Blog</a>
+    </nav>
+      <!-- OUTLINE SITE NAV END -->
           <span class="local-badge"><i></i> 全部本地运行</span
           ><button
             class="icon-btn audio-global"
@@ -288,6 +299,23 @@
     <!-- Deferred scripts execute in document order after parsing,
          keeping ~1.2MB of effect code off the critical rendering path. -->
     <script defer src="src/generated.js"></script>
+    <!-- OUTLINE I18N START -->
+    <script defer src="/museum-i18n/en.00.ui.js"></script>
+    <script defer src="/museum-i18n/en.10.light.js"></script>
+    <script defer src="/museum-i18n/en.100.systems.js"></script>
+    <script defer src="/museum-i18n/en.110.eras.js"></script>
+    <script defer src="/museum-i18n/en.120.gesture.js"></script>
+    <script defer src="/museum-i18n/en.130.audio.js"></script>
+    <script defer src="/museum-i18n/en.20.pointer.js"></script>
+    <script defer src="/museum-i18n/en.30.motion.js"></script>
+    <script defer src="/museum-i18n/en.40.type.js"></script>
+    <script defer src="/museum-i18n/en.50.space.js"></script>
+    <script defer src="/museum-i18n/en.60.generative.js"></script>
+    <script defer src="/museum-i18n/en.70.scroll.js"></script>
+    <script defer src="/museum-i18n/en.80.controls.js"></script>
+    <script defer src="/museum-i18n/en.90.design.js"></script>
+    <script defer src="/museum-i18n/outline-i18n.js"></script>
+    <!-- OUTLINE I18N END -->
     <script defer src="src/toolkit.js"></script>
     <script defer src="src/expansion-runtime.js"></script>
     <script defer src="src/mechanics-runtime.js"></script>
