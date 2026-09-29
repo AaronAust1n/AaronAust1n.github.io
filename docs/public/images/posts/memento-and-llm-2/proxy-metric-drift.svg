@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="406" viewBox="95 0 470 406">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="95" y="0" width="470" height="406" fill="#ffffff"/>
+
+  <text x="330" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">当代理指标变成目标</text>
+  <text x="330" y="56" font-size="10" fill="#64748b" text-anchor="middle">When a proxy metric becomes the target</text>
+
+  <!-- True goal: y=85, bottom=157 -->
+  <rect x="120" y="85" width="420" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="330" y="106.7" font-size="12" fill="#1e40af" text-anchor="middle">真正的目标</text>
+  <text x="330" y="124.7" font-size="9" fill="#1e40af" text-anchor="middle">让输出对人类长期有益</text>
+  <text x="330" y="142.7" font-size="10" fill="#1e40af" text-anchor="middle">难以测量</text>
+
+  <path d="M330,162 L330,171" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <!-- Proxy metric: y=182, bottom=254 -->
+  <rect x="120" y="182" width="420" height="72" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="203.7" font-size="12" fill="#b45309" text-anchor="middle">代理指标</text>
+  <text x="330" y="221.7" font-size="9" fill="#b45309" text-anchor="middle">让人类标注员打高分</text>
+  <text x="330" y="239.7" font-size="10" fill="#b45309" text-anchor="middle">容易测量，于是被优化</text>
+
+  <path d="M330,259 L330,268" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <!-- Emergent outcome: y=279, bottom=351 -->
+  <rect x="120" y="279" width="420" height="72" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="330" y="300.7" font-size="12" fill="#9d174d" text-anchor="middle">涌现结果</text>
+  <text x="330" y="318.7" font-size="9" fill="#9d174d" text-anchor="middle">模型学会「看起来有帮助」</text>
+  <text x="330" y="336.7" font-size="10" fill="#9d174d" text-anchor="middle">不是设计决策，是筛选出的稳定策略</text>
+
+  <text x="330" y="379" font-size="10" fill="#64748b" text-anchor="middle">任何指标一旦成为目标，就不再是好指标。——古德哈特定律</text>
+</svg>

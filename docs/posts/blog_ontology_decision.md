@@ -18,6 +18,9 @@ keywords: "AI decision-making, ontology, explainable AI, business logic formaliz
 
 # The Real Bottleneck in AI Decision-Making Isn't Algorithms—It's Your Inability to Formalize Business Logic
 
+![The Porphyrian Tree](/images/posts/blog_ontology_decision/porphyrian-tree.png)
+*Image: The Porphyrian Tree. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Porphyrian_Trees_Gallery.png) / 公有领域.*
+
 > When you need to bet millions on a decision, you'll find what you really want to know isn't "what will happen," but "how the hell was this calculated?"
 
 *Published on March 2, 2026*
@@ -118,4 +121,13 @@ One final question: if AI could predict perfectly but couldn't explain, versus c
 Most of the time, we think we want accuracy. But when you're actually betting millions on a decision, you'll find what you really want to know is: **how the hell was this calculated?**
 
 ---
+
+
+---
+
+## References and Further Reading
+
+- Ontology (information science) — https://en.wikipedia.org/wiki/Ontology_(information_science)
+- Porphyrian tree — https://en.wikipedia.org/wiki/Porphyrian_tree
+- Image source — https://commons.wikimedia.org/wiki/File:Porphyrian_Trees_Gallery.png
 [View All Posts](./index.md)

@@ -18,6 +18,9 @@ keywords: "AI决策, 本体论, Ontology, 可解释AI, 业务逻辑形式化, �
 
 # AI决策的真正瓶颈不是算法，而是你无法形式化业务逻辑
 
+![波菲利之树](/images/posts/blog_ontology_decision/porphyrian-tree.png)
+*图：波菲利之树。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Porphyrian_Trees_Gallery.png) / 公有领域。*
+
 > 当你需要拿几百万赌一个决策时，你会发现你更想知道的不是"会怎样"，而是"这TM是怎么算出来的"。
 
 *发布于 2026年3月2日*
@@ -118,4 +121,13 @@ AI决策的瓶颈到底在哪？
 
 
 ---
+
+
+---
+
+## 参考与延伸
+
+- 本体（信息科学）— https://en.wikipedia.org/wiki/Ontology_(information_science)
+- 波菲利之树 — https://en.wikipedia.org/wiki/Porphyrian_tree
+- 图源 — https://commons.wikimedia.org/wiki/File:Porphyrian_Trees_Gallery.png
 [查看所有文章](./index.md)

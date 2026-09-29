@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="306" viewBox="0 0 560 306">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow-pink" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ec4899"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="560" height="306" fill="#ffffff"/>
+
+  <text x="280" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">超常刺激的循环</text>
+  <text x="280" y="56" font-size="10" fill="#64748b" text-anchor="middle">The supernormal-stimulus loop</text>
+
+  <!-- A: x=25, y=85, w=220, h=72 -->
+  <rect x="25" y="85" width="240" height="72" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="145" y="106.7" font-size="12" fill="#9d174d" text-anchor="middle">现实的痛苦</text>
+  <text x="145" y="124.7" font-size="9" fill="#9d174d" text-anchor="middle">加班、房价、流动变窄</text>
+  <text x="145" y="142.7" font-size="10" fill="#9d174d" text-anchor="middle">根源没有被触碰</text>
+
+  <!-- B: x=315, y=85 -->
+  <rect x="295" y="85" width="240" height="72" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="415" y="106.7" font-size="12" fill="#b45309" text-anchor="middle">逃避的需求</text>
+  <text x="415" y="124.7" font-size="9" fill="#b45309" text-anchor="middle">痛苦存在，需求就存在</text>
+  <text x="415" y="142.7" font-size="10" fill="#b45309" text-anchor="middle">资本于是有利可图</text>
+
+  <!-- C: x=315, y=182 -->
+  <rect x="295" y="182" width="240" height="72" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="415" y="203.7" font-size="12" fill="#166534" text-anchor="middle">超常刺激：短剧</text>
+  <text x="415" y="221.7" font-size="9" fill="#166534" text-anchor="middle">几十秒一次情感高潮</text>
+  <text x="415" y="239.7" font-size="10" fill="#166534" text-anchor="middle">6.9 元一次即时满足</text>
+
+  <!-- D: x=25, y=182 -->
+  <rect x="25" y="182" width="240" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="145" y="203.7" font-size="12" fill="#1e40af" text-anchor="middle">即时快感</text>
+  <text x="145" y="221.7" font-size="9" fill="#1e40af" text-anchor="middle">情绪被修复到能上班</text>
+  <text x="145" y="239.7" font-size="10" fill="#1e40af" text-anchor="middle">现实并未改变</text>
+
+  <!-- Cycle arrows -->
+  <path d="M270,121 L284,121" fill="none" stroke="#ec4899" marker-end="url(#arrow-pink)"/>
+  <path d="M415,162 L415,171" fill="none" stroke="#f59e0b" marker-end="url(#arrow-amber)"/>
+  <path d="M290,218 L276,218" fill="none" stroke="#22c55e" marker-end="url(#arrow-green)"/>
+  <path d="M145,177 L145,168" fill="none" stroke="#3b82f6" marker-end="url(#arrow-blue)"/>
+
+  <text x="280" y="279" font-size="10" fill="#64748b" text-anchor="middle">不需要有人设计，循环自己就会转。</text>
+</svg>

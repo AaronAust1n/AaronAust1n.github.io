@@ -21,6 +21,9 @@ keywords: "Attention Economy, Digital Distraction, Deep Reading, Information Ove
 
 # [Original] A Brief History of Human Attention: How We Lost the Ability to Stare at a Tree
 
+![Rodin's The Thinker](/images/posts/attention-history/thinker.jpg)
+*Image: Rodin's The Thinker. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg) / CC0.*
+
 > We are the only content consumers on this planet, right?
 
 *Published on 2026-02-25*
@@ -73,3 +76,11 @@ Or perhaps, this itself doesn't mean much. All insights will be drowned by massi
 
 ---
 [See all posts](../posts/index.md)
+
+---
+
+## References and Further Reading
+
+- Attention economy — https://en.wikipedia.org/wiki/Attention_economy
+- The Thinker — https://en.wikipedia.org/wiki/The_Thinker
+- Image source — https://commons.wikimedia.org/wiki/File:Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg

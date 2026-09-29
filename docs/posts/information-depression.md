@@ -20,6 +20,9 @@ keywords: "GitHub, Open Source, Claude Code, AI Generated Content, Information I
 
 # [Original] When Software Becomes Handicraft, We Are Building an Information Great Depression
 
+![Dorothea Lange, Migrant Mother, 1936](/images/posts/information-depression/migrant-mother.jpg)
+*Image: Dorothea Lange, "Migrant Mother" (1936)—the imagery of the Great Depression, as a metaphor for an information depression. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lange-MigrantMother02.jpg) / public domain.*
+
 GitHub sees hundreds of thousands of new repositories every day. Most of them are never used, never maintained, never read. They simply exist — occupying server space, adding noise to search results, waiting to be forgotten. We talk about a “thriving open-source ecosystem”, about “record numbers of contributors”, about “democratization”. But if you open the repository list under any hot topic, what you actually see is: fifty almost identical CLI tools, twenty “weekend reimplementations” of some trendy framework, and a dozen “frameworks” whose README is three times longer than the code. These projects are not waiting for users. They are waiting to be starred once and never opened again.
 
 My sense is this: **we are actively building an information great depression.** It’s not that information disappears, it’s that there is so much of it that it cancels itself out. A huge amount of open-source software was never written to be used; it was written to have been written. GitHub is not a code warehouse, it’s a programmer’s MySpace page.
@@ -86,3 +89,10 @@ This is not the death of the internet. It is the future the internet once promis
 
 Here’s a small case from my own life: I discovered that WPS supports plugin development. I found a few open-source projects but couldn’t get any of them to run, so I used Cursor to build one myself. It took about two days, then I published it to my company’s plugin marketplace and open-sourced the prototype. Of course, nobody used it — because nobody even knew it existed.
 
+---
+
+## References and Further Reading
+
+- Great Depression — https://en.wikipedia.org/wiki/Great_Depression
+- Dorothea Lange and "Migrant Mother" — https://en.wikipedia.org/wiki/Dorothea_Lange
+- Image source (public domain) — https://commons.wikimedia.org/wiki/File:Lange-MigrantMother02.jpg

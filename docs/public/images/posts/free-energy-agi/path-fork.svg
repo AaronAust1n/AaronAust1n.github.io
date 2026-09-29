@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="438" viewBox="25 0 740 438">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow-pink" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ec4899"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+  </defs>
+
+  <rect x="25" y="0" width="740" height="438" fill="#ffffff"/>
+
+  <text x="395" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">AI 接管预测之后的两条路径</text>
+  <text x="395" y="56" font-size="10" fill="#64748b" text-anchor="middle">Two paths after AI takes over prediction</text>
+
+  <!-- Top box: x=265, y=75, w=260, h=54, bottom=129 -->
+  <rect x="265" y="75" width="260" height="54" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="395" y="96.7" font-size="12" fill="#1e40af" text-anchor="middle">AI 替代预测与行动</text>
+  <text x="395" y="114.7" font-size="9" fill="#1e40af" text-anchor="middle">AI replaces prediction and action</text>
+
+  <!-- Split curves -->
+  <path d="M345,134 C 300,157 215,142 215,148" fill="none" stroke="#ec4899" marker-end="url(#arrow-pink)"/>
+  <path d="M445,134 C 490,157 575,142 575,148" fill="none" stroke="#22c55e" marker-end="url(#arrow-green)"/>
+
+  <!-- Path A: x=50, w=330, center=215 -->
+  <rect x="50" y="159" width="330" height="54" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="215" y="181.2" font-size="12" fill="#9d174d" text-anchor="middle">被动萎缩</text>
+  <text x="215" y="198.2" font-size="9" fill="#9d174d" text-anchor="middle">Passive atrophy</text>
+
+  <path d="M215,218 L215,231" fill="none" stroke="#ec4899" marker-end="url(#arrow-pink)"/>
+
+  <rect x="50" y="242" width="330" height="54" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="215" y="264.2" font-size="12" fill="#9d174d" text-anchor="middle">预测退化，更依赖 AI</text>
+  <text x="215" y="281.2" font-size="9" fill="#9d174d" text-anchor="middle">prediction decays, dependency grows</text>
+
+  <path d="M215,301 L215,313" fill="none" stroke="#ec4899" marker-end="url(#arrow-pink)"/>
+
+  <rect x="50" y="324" width="330" height="54" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="215" y="346.2" font-size="12" fill="#9d174d" text-anchor="middle">成为 AI 系统的器官</text>
+  <text x="215" y="363.2" font-size="9" fill="#9d174d" text-anchor="middle">an organ of the AI system, not a subject</text>
+
+  <!-- Path B: x=410, w=330, center=575 -->
+  <rect x="410" y="159" width="330" height="54" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="575" y="181.2" font-size="12" fill="#166534" text-anchor="middle">主动跃迁</text>
+  <text x="575" y="198.2" font-size="9" fill="#166534" text-anchor="middle">Active ascent</text>
+
+  <path d="M575,218 L575,231" fill="none" stroke="#22c55e" marker-end="url(#arrow-green)"/>
+
+  <rect x="410" y="242" width="330" height="54" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="575" y="264.2" font-size="12" fill="#166534" text-anchor="middle">主动推断上移到更高层次</text>
+  <text x="575" y="281.2" font-size="9" fill="#166534" text-anchor="middle">active inference moves to a higher level</text>
+
+  <path d="M575,301 L575,313" fill="none" stroke="#22c55e" marker-end="url(#arrow-green)"/>
+
+  <rect x="410" y="324" width="330" height="54" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="575" y="346.2" font-size="12" fill="#166534" text-anchor="middle">在时间中选择 · 真实关系 · 意义</text>
+  <text x="575" y="363.2" font-size="9" fill="#166534" text-anchor="middle">choice in time · real relationships · meaning</text>
+
+  <text x="395" y="411" font-size="10" fill="#64748b" text-anchor="middle">分叉点：马尔可夫毯收紧，还是松动？</text>
+</svg>

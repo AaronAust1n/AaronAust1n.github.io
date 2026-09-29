@@ -25,6 +25,12 @@ keywords: "OpenClaw, 巴别塔, AI Agent, 开源, GitHub, 群体智慧, 贡献�
 
 *发布于 2026年3月10日*
 
+![一只龙虾](/images/posts/openclaw-babel-tower/lobster.jpg)
+*图：OpenClaw 的社区吉祥物是龙虾。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Live_lobster_173.jpg) / Louisiana Sea Grant, CC BY 2.0。*
+
+![老彼得·勃鲁盖尔《巴别塔》，维也纳版](/images/posts/openclaw-babel-tower/babel-bruegel.jpg)
+*图：老彼得·勃鲁盖尔《巴别塔》（维也纳版，约 1563）。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Brueghel-tower-of-babel.jpg) / 公有领域。*
+
 2026年3月，GitHub上一个项目的star数突破了291,000。超过React，超过Linux内核。一个三个多月前还不存在的东西，现在每天有将近7,000个开发者按下Star。
 
 这个项目叫OpenClaw。
@@ -124,5 +130,17 @@ OpenClaw就是那块砖。它把AI Agent的开发从少数公司的专有技术�
 毕竟，巴别塔之后，人类还是把楼建到了828米。只是花了几千年而已。
 
 ---
+
+
+
+---
+
+![卢卡斯·范·瓦尔肯博赫《巴别塔》，1594](/images/posts/openclaw-babel-tower/babel-valckenborch.jpg)
+*图：卢卡斯·范·瓦尔肯博赫《巴别塔》（1594）。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:La_Tour_de_Babel,_Van_Valckenborch,_1594.jpg) / 公有领域。*
+
+## 参考与延伸
+
+- Peter Steinberger（GitHub）— https://github.com/steipete
+- 图源 — https://commons.wikimedia.org/wiki/File:Live_lobster_173.jpg
 
 [查看所有文章](../posts/index.md)

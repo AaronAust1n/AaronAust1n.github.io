@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="765" height="310" viewBox="0 0 765 310">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+
+  <rect x="0" y="0" width="765" height="310" fill="#ffffff"/>
+
+  <text x="382" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">AI 文明未开采的八块金矿</text>
+  <text x="382" y="56" font-size="10" fill="#64748b" text-anchor="middle">Eight unmined gold mines of AI civilization</text>
+
+  <!-- Row 1: y=85, h=72; Row 2: y=182, h=72 -->
+  <!-- Cols: x=25, 210, 395, 580; w=160 -->
+
+  <rect x="25" y="85" width="160" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="105" y="106.7" font-size="12" fill="#6b21a8" text-anchor="middle">因果基础设施</text>
+  <text x="105" y="124.7" font-size="9" fill="#6b21a8" text-anchor="middle">Causal Infrastructure</text>
+  <text x="105" y="142.7" font-size="8" fill="#6b21a8" text-anchor="middle">认知层</text>
+
+  <rect x="210" y="85" width="160" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="290" y="106.7" font-size="12" fill="#6b21a8" text-anchor="middle">记忆操作系统</text>
+  <text x="290" y="124.7" font-size="9" fill="#6b21a8" text-anchor="middle">Memory OS</text>
+  <text x="290" y="142.7" font-size="8" fill="#6b21a8" text-anchor="middle">认知层</text>
+
+  <rect x="395" y="85" width="160" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="475" y="106.7" font-size="12" fill="#6b21a8" text-anchor="middle">认知地图</text>
+  <text x="475" y="124.7" font-size="9" fill="#6b21a8" text-anchor="middle">Cognitive Map</text>
+  <text x="475" y="142.7" font-size="8" fill="#6b21a8" text-anchor="middle">认知层</text>
+
+  <rect x="580" y="85" width="160" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="660" y="106.7" font-size="12" fill="#1e40af" text-anchor="middle">意图编译器</text>
+  <text x="660" y="124.7" font-size="9" fill="#1e40af" text-anchor="middle">Intent Compiler</text>
+  <text x="660" y="142.7" font-size="8" fill="#1e40af" text-anchor="middle">协调层</text>
+
+  <rect x="25" y="182" width="160" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="105" y="203.7" font-size="12" fill="#1e40af" text-anchor="middle">智能体信誉</text>
+  <text x="105" y="221.7" font-size="9" fill="#1e40af" text-anchor="middle">Agent Reputation</text>
+  <text x="105" y="239.7" font-size="8" fill="#1e40af" text-anchor="middle">协调层</text>
+
+  <rect x="210" y="182" width="160" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="290" y="203.7" font-size="12" fill="#1e40af" text-anchor="middle">情境总线</text>
+  <text x="290" y="221.7" font-size="9" fill="#1e40af" text-anchor="middle">Context Bus</text>
+  <text x="290" y="239.7" font-size="8" fill="#1e40af" text-anchor="middle">协调层</text>
+
+  <rect x="395" y="182" width="160" height="72" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="475" y="203.7" font-size="12" fill="#b45309" text-anchor="middle">语义版本控制</text>
+  <text x="475" y="221.7" font-size="9" fill="#b45309" text-anchor="middle">Semantic Versioning</text>
+  <text x="475" y="239.7" font-size="8" fill="#b45309" text-anchor="middle">演化层</text>
+
+  <rect x="580" y="182" width="160" height="72" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="660" y="203.7" font-size="12" fill="#166534" text-anchor="middle">对抗测试</text>
+  <text x="660" y="221.7" font-size="9" fill="#166534" text-anchor="middle">Adversarial Testing</text>
+  <text x="660" y="239.7" font-size="8" fill="#166534" text-anchor="middle">质量层</text>
+
+  <text x="382" y="283" font-size="10" fill="#64748b" text-anchor="middle"><tspan fill="#6b21a8">认知层</tspan> · <tspan fill="#1e40af">协调层</tspan> · <tspan fill="#b45309">演化层</tspan> · <tspan fill="#166534">质量层</tspan></text>
+</svg>

@@ -22,6 +22,9 @@ keywords: "Palantir, 数据治理, 本体论, Ontology, 企业估值, AI平台, 
 
 *发布于 2026年3月1日*
 
+![亚历克斯·卡普在 AI 峰会](/images/posts/palantir_valuation/alex-karp.jpg)
+*图：Palantir CEO Alex Karp。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Alex_Karp_attends_AI_Summit_(53302457013)_(cropped).jpg) / UK Government, CC BY 2.0。*
+
 
 
 Palantir值4000亿美元。这个数字出来的时候，分析师们开始找理由：政府合同的续约率、企业客户的扩展率、AIP带来的增长曲线。这些数字都对，但回避了一个更基本的问题：**这家公司到底卖的是什么？**
@@ -128,4 +131,14 @@ Palantir的4000亿估值，押注的是这个时间窗口足够长。长到他�
 
 
 ---
+
+
+---
+
+## 参考与延伸
+
+- Palantir Technologies — https://en.wikipedia.org/wiki/Palantir_Technologies
+- Alex Karp — https://en.wikipedia.org/wiki/Alex_Karp
+- 图源 — https://commons.wikimedia.org/wiki/File:Alex_Karp_attends_AI_Summit_(53302457013)_(cropped).jpg
+
 [查看所有文章](./index.md)

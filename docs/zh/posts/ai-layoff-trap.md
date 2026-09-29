@@ -19,6 +19,9 @@ keywords: "AI裁员陷阱, 博弈论, 自动化经济, 需求外部性, 囚徒�
 
 # AI裁员陷阱：理性竞争如何导致集体灾难
 
+![囚徒困境示意图](/images/posts/ai-layoff-trap/prisoner-dilemma.png)
+*图：囚徒困境示意图。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Prisoner%27s_Dilemma-_Figure_1.png) / Yulian & Guoqing (2017), CC BY-SA 4.0。*
+
 *研究论文作者：Brett Hemenway Falk (宾夕法尼亚大学) & Gerry Tsoukalas (波士顿大学)*  
 *arXiv:2603.20617 · 2026年3月*
 
@@ -212,3 +215,11 @@ The Wharton School Research Paper, arXiv:2603.20617, 2026年3月
 - 六大政策工具对比
 
 可视化版本基于原研究论文，用更直观的方式展示核心机制。
+
+---
+
+## 参考与延伸
+
+- 论文 — https://arxiv.org/abs/2603.20617
+- 囚徒困境 — https://en.wikipedia.org/wiki/Prisoner%27s_dilemma
+- 图源 — https://commons.wikimedia.org/wiki/File:Prisoner%27s_Dilemma-_Figure_1.png

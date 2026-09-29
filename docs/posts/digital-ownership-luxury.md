@@ -19,6 +19,9 @@ keywords: "Digital Ownership, Open Source, Subscription Economy, Data Sovereignt
 
 # "Mine" Is a Luxury
 
+![Gold bullion](/images/posts/digital-ownership-luxury/gold-bars.jpg)
+*Image: Gold bullion. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg) / Stevebidmead, CC0.*
+
 You spent three thousand yuan buying books on Kindle. One day Amazon shut down its China operations, and your bookshelf went blank. You spent twenty thousand yuan on Steam games. In 2024, Sony's Concord was pulled from shelves eleven days after launch—players who paid $40 were left with nothing. Ubisoft's The Crew shut down its servers after ten years of operation. Every player's save files, vehicles, and race records evaporated overnight.
 
 These aren't hypotheticals. These things actually happened in the past two years.
@@ -82,3 +85,11 @@ Back to the opening claim: "mine" is becoming a luxury. This trend won't reverse
 In this landscape, open source is the lowest-cost form of resistance, and possibly the only structurally sustainable one. It doesn't require you to lobby legislators in Brussels. It doesn't require you to launch a million-signature citizens' initiative. It doesn't require you to wait for an antitrust lawsuit that might take a decade. It only requires that code is open, licenses are free, and the right to fork is irrevocable.
 
 That sounds like a low bar. But in a world where "mine" is dying, "anyone can copy and modify this code" might be the last—and most powerful—sentence ordinary people have left.
+
+---
+
+## References and Further Reading
+
+- Ownership — https://en.wikipedia.org/wiki/Ownership
+- Luxury goods — https://en.wikipedia.org/wiki/Luxury_goods
+- Image source — https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg

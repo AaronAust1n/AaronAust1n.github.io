@@ -24,6 +24,9 @@ keywords: "AI基础设施, Stack Overflow, 人机关系, 资源分配, 能源消
 
 *发布于 2026-02-26*
 
+![柏拉图洞穴寓言，Jan Saenredam 1604 年版画](/images/posts/inner-world-and-outer-world/plato-cave.jpg)
+*图：柏拉图的洞穴（Jan Saenredam，1604）。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Platon_Cave_Sanraedam_1604.jpg) / 公有领域。*
+
 Stack Overflow 的流量和股价都雪崩，这件事本身没什么奇怪的，平台有生命周期，技术社区此消彼长，这很正常。但是它衰落的方式——程序员没有离开，他们只是不再需要向彼此提问了。这个变化让我开始思考：AI 和人类的基础设施，是否正在发生某种结构性的分化？AI将构建一个独立且日益壮大的“里世界”（基础设施、经济、政治），而人类世界（表世界，APP，线下商店，电影院）的相关建设可能逐渐消亡。
 
 表面上看，这似乎只是工具替代的老故事。搜索引擎取代了图书馆检索员，电子邮件取代了传真，每一次都是效率的胜利，每一次也都有一批旧的基础设施慢慢退场。但这一轮的节奏和性质有些不同。以前的工具替代，替换的是人与人之间传递信息的中间层；这一次，正在被重塑的，**是人类组织知识、协作、决策的底层逻辑本身**。向量数据库、embedding 标准、AI agent 之间的通信协议，这些东西现在的我们还能能读懂，但设计的出发点已经不是"我们如何使用它"。这是一套新的语言，或者说，一套新的基础设施正在生长，它的受众和服务对象与过去几十年我们习以为常的那套，开始出现明显的错位。
@@ -61,3 +64,10 @@ Stack Overflow 的程序员还在写代码，但那些曾经发生在论坛里�
 是吗？
 
 还是说我们应该努力成为**两个世界间不可替代的“接口”？**
+
+---
+
+## 参考与延伸
+
+- 柏拉图《理想国》洞穴寓言 — https://en.wikipedia.org/wiki/Allegory_of_the_cave
+- 洞穴寓言版画（Jan Saenredam，1604）— https://commons.wikimedia.org/wiki/File:Platon_Cave_Sanraedam_1604.jpg

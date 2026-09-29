@@ -19,6 +19,9 @@ keywords: "开源生态, 代码生成, 信息通胀, 软件手工艺, AI生成�
 
 # [原创] 当软件正在变成手工艺，我们正在制造一场信息大萧条
 
+![多萝西娅·兰格《移民母亲》，1936](/images/posts/information-depression/migrant-mother.jpg)
+*图：Dorothea Lange《移民母亲》（1936）。大萧条的影像，也是“信息大萧条”的隐喻。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lange-MigrantMother02.jpg) / 公有领域。*
+
 GitHub上每天新增几十万个仓库。其中大多数没人用，没人维护，没人读。它们只是存在着，占据着服务器空间，在搜索结果里制造噪音，等待着被遗忘。说的是"开源生态繁荣"，说的是"贡献者数量创历史新高"，说的是"民主化"。但如果你打开任何一个热门话题下的 repository 列表，你看到的是：五十个功能几乎相同的 CLI 工具，二十个"我用周末写的 OpenClaw国产平替"，还有十几个 README 写得比代码长三倍的"框架"。这些代码不是在等人用。它们在等人收藏，然后再也不被打开。
 
 我的判断是：**我们正在亲手制造一场信息的大萧条**。不是信息消失了，是信息多到让自己失效了。大量的开源软件从来就不是为了被使用而写的，而是为了被写而写。GitHub 不是代码仓库，是程序员的QQ空间（暴露年龄了）。
@@ -85,3 +88,10 @@ GitHub现在像一个巨大的跳蚤市场，里面九成的摊位卖的是同�
 
 我本人遭遇的案例：我发现WPS提供了插件开发功能，找了几个开源项目发现没法运行，于是用cursor自己写了一个，差不多两天就写完了，然后提交到了公司的插件市场，插件原型也开源了。结果当然是无人问津，因为根本没人知道有这个插件。
 
+---
+
+## 参考与延伸
+
+- 大萧条（Great Depression）— https://en.wikipedia.org/wiki/Great_Depression
+- Dorothea Lange 与《移民母亲》— https://en.wikipedia.org/wiki/Dorothea_Lange
+- 图源（公有领域）— https://commons.wikimedia.org/wiki/File:Lange-MigrantMother02.jpg

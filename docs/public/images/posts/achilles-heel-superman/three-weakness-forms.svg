@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="730" height="210" viewBox="0 0 730 210">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="730" height="210" fill="#ffffff"/>
+
+  <text x="365" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">弱点的三种形态</text>
+  <text x="365" y="56" font-size="10" fill="#64748b" text-anchor="middle">Three forms of weakness: the heel, the rock, and the poison</text>
+
+  <!-- Row: y=85, h=72; cols x=25, 260, 495; w=210; centers 130, 365, 600 -->
+  <rect x="25" y="85" width="210" height="72" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="130" y="106.7" font-size="12" fill="#9d174d" text-anchor="middle">阿克琉斯之踵</text>
+  <text x="130" y="124.7" font-size="9" fill="#9d174d" text-anchor="middle">长在身上 · 一次性</text>
+  <text x="130" y="142.7" font-size="10" fill="#9d174d" text-anchor="middle">射中，或没射中</text>
+
+  <path d="M240,121 L249,121" fill="none" stroke="#f59e0b" marker-end="url(#arrow-amber)"/>
+
+  <rect x="260" y="85" width="210" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="365" y="106.7" font-size="12" fill="#1e40af" text-anchor="middle">氪石</text>
+  <text x="365" y="124.7" font-size="9" fill="#1e40af" text-anchor="middle">外部接口 · 可复用可迭代</text>
+  <text x="365" y="142.7" font-size="10" fill="#1e40af" text-anchor="middle">子弹、粉末、戒指上的宝石</text>
+
+  <path d="M475,121 L484,121" fill="none" stroke="#f59e0b" marker-end="url(#arrow-amber)"/>
+
+  <rect x="495" y="85" width="210" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="600" y="106.7" font-size="12" fill="#6b21a8" text-anchor="middle">全明星超人</text>
+  <text x="600" y="124.7" font-size="9" fill="#6b21a8" text-anchor="middle">弱点 = 力量本身</text>
+  <text x="600" y="142.7" font-size="10" fill="#6b21a8" text-anchor="middle">太阳既是力量，也是毒药</text>
+
+  <text x="365" y="185" font-size="10" fill="#64748b" text-anchor="middle">无敌的人必须有一个会死的地方，故事才能继续。</text>
+</svg>

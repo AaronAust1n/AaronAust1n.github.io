@@ -20,6 +20,9 @@ keywords: "OpenClaw, AI安全, Agent框架, 开源, ClawJacked, CVE-2026-25253, 
 
 # OpenClaw全民狂欢的背后
 
+![生锈的挂锁](/images/posts/openclaw-security-concerns/rusty-padlock.jpg)
+*图：生锈的挂锁。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rusty_Padlock_Close_Up.jpg) / Saishna96, CC BY-SA 4.0。*
+
 > 26万GitHub Stars，深圳腾讯大厦千人排队安装，韩国科技巨头却在同一时间下令禁用。一个开源项目同时引发了狂热和恐惧，这件事本身就值得停下来想一想。
 
 *发布于 2026-03-05*
@@ -93,4 +96,13 @@ OpenClaw的官方修复方向——加强认证、限制暴力破解、记录日
 OpenClaw不是终点。它是第一个把Agent从实验室搬到普通人桌面上的项目，也是第一个在大规模部署中暴露Agent安全问题的项目。接下来会发生什么，取决于这个社区——以及整个行业——能不能在狂欢还没散场的时候，认真对待脚下的裂缝。
 
 ---
+
+
+---
+
+## 参考与延伸
+
+- 计算机安全 — https://en.wikipedia.org/wiki/Computer_security
+- 开源软件安全 — https://en.wikipedia.org/wiki/Open-source_software_security
+- 图源 — https://commons.wikimedia.org/wiki/File:Rusty_Padlock_Close_Up.jpg
 [查看所有文章](../posts/index.md)

@@ -19,6 +19,9 @@ keywords: "注意力经济, 深度阅读, 信息过载, 认知进化, 社交媒�
 
 # [原创] 人类注意力简史：我们如何失去盯着一棵树发呆的能力
 
+![罗丹《思想者》](/images/posts/attention-history/thinker.jpg)
+*图：罗丹《思想者》。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg) / CC0。*
+
 > 我们是这个星球上唯一的内容消费者，对吧？
 
 *发布于 2026-02-25*
@@ -69,4 +72,13 @@ keywords: "注意力经济, 深度阅读, 信息过载, 认知进化, 社交媒�
 又或者，也许这本身也没什么意义。所有的洞见都会被海量的信息淹没，我们仅剩的价值，就是为内容提供宝贵的注意力，筛选出更吸引注意力的新内容，然后循环往复。**毕竟，我们是这个星球上唯一的内容消费者，对吧？**
 
 ---
+
+
+---
+
+## 参考与延伸
+
+- 注意力经济 — https://en.wikipedia.org/wiki/Attention_economy
+- 《思想者》— https://en.wikipedia.org/wiki/The_Thinker
+- 图源 — https://commons.wikimedia.org/wiki/File:Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg
 [查看所有文章](../posts/index.md)

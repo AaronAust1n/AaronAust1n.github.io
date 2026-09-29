@@ -19,6 +19,9 @@ keywords: "AI layoff trap, game theory, automation economics, demand externality
 
 # The AI Layoff Trap: When Rational Competition Leads to Collective Disaster
 
+![Prisoner's dilemma diagram](/images/posts/ai-layoff-trap/prisoner-dilemma.png)
+*Image: Prisoner's dilemma diagram. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Prisoner%27s_Dilemma-_Figure_1.png) / Yulian & Guoqing (2017), CC BY-SA 4.0.*
+
 *Research Paper by Brett Hemenway Falk (University of Pennsylvania) & Gerry Tsoukalas (Boston University)*  
 *arXiv:2603.20617 · March 2026*
 
@@ -213,3 +216,11 @@ The visualization includes:
 - Comparative policy tool analysis
 
 The interactive version presents the research's core mechanisms in a more intuitive way.
+
+---
+
+## References and Further Reading
+
+- Paper — https://arxiv.org/abs/2603.20617
+- Prisoner's dilemma — https://en.wikipedia.org/wiki/Prisoner%27s_dilemma
+- Image source — https://commons.wikimedia.org/wiki/File:Prisoner%27s_Dilemma-_Figure_1.png

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="212" viewBox="0 0 800 212">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="212" fill="#ffffff"/>
+
+  <text x="400" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">境界是阶梯，跃迁是渡劫</text>
+  <text x="400" y="56" font-size="10" fill="#64748b" text-anchor="middle">Realms as a staircase, breakthroughs as tribulations</text>
+
+  <!-- boxes y=85, h=72; x=25,180,335,490,645; w=130; gaps 25 -->
+  <rect x="25" y="85" width="130" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="90" y="106.7" font-size="12" fill="#1e40af" text-anchor="middle">炼气</text>
+  <text x="90" y="124.7" font-size="9" fill="#1e40af" text-anchor="middle">Qi Refining</text>
+  <text x="90" y="142.7" font-size="10" fill="#1e40af" text-anchor="middle">灵根定起点</text>
+
+  <path d="M160,121 L169,121" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="180" y="85" width="130" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="245" y="106.7" font-size="12" fill="#1e40af" text-anchor="middle">筑基</text>
+  <text x="245" y="124.7" font-size="9" fill="#1e40af" text-anchor="middle">Foundation</text>
+  <text x="245" y="142.7" font-size="10" fill="#1e40af" text-anchor="middle">线性积累</text>
+
+  <path d="M315,121 L324,121" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="335" y="85" width="130" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="400" y="106.7" font-size="12" fill="#1e40af" text-anchor="middle">金丹</text>
+  <text x="400" y="124.7" font-size="9" fill="#1e40af" text-anchor="middle">Golden Core</text>
+  <text x="400" y="142.7" font-size="10" fill="#1e40af" text-anchor="middle">积累的天花板</text>
+
+  <path d="M470,121 L479,121" fill="none" stroke="#f59e0b" stroke-dasharray="4,3" marker-end="url(#arrow-amber)"/>
+
+  <rect x="490" y="85" width="130" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="555" y="106.7" font-size="12" fill="#6b21a8" text-anchor="middle">元婴</text>
+  <text x="555" y="124.7" font-size="9" fill="#6b21a8" text-anchor="middle">Nascent Soul</text>
+  <text x="555" y="142.7" font-size="10" fill="#6b21a8" text-anchor="middle">渡劫之后</text>
+
+  <path d="M625,121 L634,121" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="645" y="85" width="130" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="710" y="106.7" font-size="12" fill="#6b21a8" text-anchor="middle">化神</text>
+  <text x="710" y="124.7" font-size="9" fill="#6b21a8" text-anchor="middle">Spirit Transformation</text>
+  <text x="710" y="142.7" font-size="10" fill="#6b21a8" text-anchor="middle">新的起点</text>
+
+  <text x="400" y="185" font-size="10" fill="#64748b" text-anchor="middle">虚线处是渡劫：非线性跃迁——要么跨越，要么停在原地。</text>
+</svg>

@@ -17,6 +17,9 @@ keywords: "数字所有权, 开源, 订阅经济, 数据主权, 反垄断, 数�
 ---
 # "我的"是奢侈品
 
+![金条](/images/posts/digital-ownership-luxury/gold-bars.jpg)
+*图：金条。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg) / Stevebidmead, CC0。*
+
 你在 Kindle 上花了三千块买书。有一天亚马逊关闭了中国区服务，你的书架空了。你在 Steam 上花了两万块买游戏。2024年，索尼的 Concord 上线11天就被下架，花了40美元的玩家手里什么都没剩下。育碧的 The Crew 在运营十年后关闭服务器，所有玩家的存档、车辆、赛道记录，一夜之间蒸发。
 
 这些不是假设。这是过去两年里真实发生的事。
@@ -80,3 +83,11 @@ Adobe 在2013年取消了 Photoshop 的永久授权，全面转向订阅制。�
 在这个格局里，开源是成本最低的对抗方式，也可能是唯一一种在结构上可持续的对抗方式。它不需要你去布鲁塞尔游说立法，不需要你发起百万人签名的公民倡议，不需要你等待一场可能耗时十年的反垄断诉讼。它只需要代码是开放的，许可证是自由的，分叉的权利是不可撤销的。
 
 这听起来像是一个很低的门槛。但在一个"我的"正在消亡的世界里，"任何人都可以复制和修改这段代码"这句话，可能是普通人手里最后的、也是最有力的一句话。
+
+---
+
+## 参考与延伸
+
+- 所有权 — https://en.wikipedia.org/wiki/Ownership
+- 奢侈品 — https://en.wikipedia.org/wiki/Luxury_goods
+- 图源 — https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg

@@ -24,6 +24,9 @@ keywords: "AI Infrastructure, Stack Overflow, Human-AI Relationship, Resource Al
 
 Published on 2026-02-26
 
+![Plato's Cave, engraving by Jan Saenredam, 1604](/images/posts/inner-world-and-outer-world/plato-cave.jpg)
+*Image: Plato's Cave (Jan Saenredam, 1604). Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Platon_Cave_Sanraedam_1604.jpg) / public domain.*
+
 Stack Overflow’s traffic and market value collapsing isn’t strange in itself. Platforms have lifecycles; tech communities rise and fall. What’s unusual is *how* it declined: programmers didn’t leave — they simply stopped needing to ask each other questions. That shift made me think: are AI and human infrastructure undergoing a structural split? AI may be building an increasingly independent **“inner world”** (infrastructure, economy, politics), while the human world — the **“outer world”** (apps, physical stores, cinemas) — gradually withers.
 
 On the surface, this sounds like the old story of tools replacing tools. Search engines replaced librarians; email replaced fax. Each time, efficiency wins — and old infrastructure quietly exits. But this wave feels different in pace and in nature. Previous replacements swapped out the middle layer of information transfer between people. This time, what’s being reshaped is **the underlying logic of how humans organize knowledge, collaborate, and make decisions**. Vector databases, embedding standards, protocols for AI agents to talk to each other — we can still read these things today, but their design center is no longer “how we use it.” A new language is forming. A new infrastructure is growing, and its intended users and served objects are starting to misalign with the one we’ve been living with for decades.
@@ -62,3 +65,9 @@ Is that so?
 
 Or should we try to become the **irreplaceable “interface” between the two worlds**?
 
+---
+
+## References and Further Reading
+
+- Plato's allegory of the cave — https://en.wikipedia.org/wiki/Allegory_of_the_cave
+- Cave engraving (Jan Saenredam, 1604) — https://commons.wikimedia.org/wiki/File:Platon_Cave_Sanraedam_1604.jpg

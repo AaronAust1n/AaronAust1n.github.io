@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="406" viewBox="95 0 470 406">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect x="95" y="0" width="470" height="406" fill="#ffffff"/>
+
+  <text x="330" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">两类认知劳动与危险的中间地带</text>
+  <text x="330" y="56" font-size="10" fill="#64748b" text-anchor="middle">Two kinds of cognitive labor, and the dangerous middle</text>
+
+  <!-- Assembly: x=120, w=420, y=85, h=72, bottom=157 -->
+  <rect x="120" y="85" width="420" height="72" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="330" y="106.7" font-size="12" fill="#166534" text-anchor="middle">组装型劳动</text>
+  <text x="330" y="124.7" font-size="9" fill="#166534" text-anchor="middle">整理、格式化、转述、翻译、对比</text>
+  <text x="330" y="142.7" font-size="10" fill="#166534" text-anchor="middle">AI 接管，而且接管得好</text>
+
+  <path d="M330,162 L330,171" fill="none" stroke="#22c55e" marker-end="url(#arrow-green)"/>
+
+  <!-- Middle zone: dashed, y=182, h=72, bottom=254 -->
+  <rect x="120" y="182" width="420" height="72" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="203.7" font-size="12" fill="#b45309" text-anchor="middle">危险的中间地带</text>
+  <text x="330" y="221.7" font-size="9" fill="#b45309" text-anchor="middle">看起来是组装，其实暗含判断</text>
+  <text x="330" y="239.7" font-size="10" fill="#b45309" text-anchor="middle">比如：选什么框架、定什么优先级</text>
+
+  <path d="M330,259 L330,268" fill="none" stroke="#f59e0b" marker-end="url(#arrow-amber)"/>
+
+  <!-- Judgment: y=279, h=72, bottom=351 -->
+  <rect x="120" y="279" width="420" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="330" y="300.7" font-size="12" fill="#6b21a8" text-anchor="middle">判断型劳动</text>
+  <text x="330" y="318.7" font-size="9" fill="#6b21a8" text-anchor="middle">不完全信息下的决策与风险评估</text>
+  <text x="330" y="336.7" font-size="10" fill="#6b21a8" text-anchor="middle">AI 做不好：它天然倾向安全答案</text>
+
+  <text x="330" y="379" font-size="10" fill="#64748b" text-anchor="middle">把判断当组装外包，久了会意识不到这里有个判断。</text>
+</svg>

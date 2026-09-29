@@ -22,6 +22,12 @@ keywords: "OpenClaw, Tower of Babel, AI Agent, open source, GitHub, collective i
 
 *Published on March 10, 2026*
 
+![A live lobster](/images/posts/openclaw-babel-tower/lobster.jpg)
+*Image: the lobster—OpenClaw's community mascot. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Live_lobster_173.jpg) / Louisiana Sea Grant, CC BY 2.0.*
+
+![Pieter Bruegel the Elder, The Tower of Babel (Vienna)](/images/posts/openclaw-babel-tower/babel-bruegel.jpg)
+*Image: Pieter Bruegel the Elder, The Tower of Babel (Vienna), c. 1563. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Brueghel-tower-of-babel.jpg) / public domain.*
+
 In March 2026, a GitHub project crossed 289,000 stars. More than React. More than the Linux kernel. Something that didn't exist four months ago now gets nearly 7,000 developers pressing that star button every day.
 
 The project is called OpenClaw.
@@ -121,4 +127,16 @@ That question can't be answered in March 2026. But watching 7,000 new stars ligh
 After all, after Babel, humanity still built to 828 meters. It just took a few thousand years.
 
 ---
+
+
+---
+
+![Lucas van Valckenborch, The Tower of Babel, 1594](/images/posts/openclaw-babel-tower/babel-valckenborch.jpg)
+*Image: Lucas van Valckenborch, The Tower of Babel (1594). Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:La_Tour_de_Babel,_Van_Valckenborch,_1594.jpg) / public domain.*
+
+## References and Further Reading
+
+- Peter Steinberger (GitHub) — https://github.com/steipete
+- Image source — https://commons.wikimedia.org/wiki/File:Live_lobster_173.jpg
+
 [View All Posts](../posts/index.md)

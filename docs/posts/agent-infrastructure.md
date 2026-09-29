@@ -21,6 +21,9 @@ keywords: "AI Agent, Agent Infrastructure, Hashmind, OAuth, Identity Protocol, M
 
 # [Original] We Got Agent Infrastructure Wrong
 
+![Identity and authorization](/images/posts/agent-infrastructure/padlock.jpg)
+*Image: Identity and authorization. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Internet_Security_Padlock_for_VPN_%26_Online_Privacy.jpg) / mikemacmarketing, CC BY 2.0.*
+
 > The real question is: when an agent starts acting on your behalf — booking flights, sending emails, writing and deploying code, managing your calendar — what authorizes it to do that? Whose identity does it carry? When something goes wrong, who's liable?
 
 *Published on February 28, 2026*
@@ -125,4 +128,13 @@ The absence is easy to ignore right now, because most agents are doing bounded t
 By then, the cost of retrofitting will be a lot higher.
 
 ---
+
+
+---
+
+## References and Further Reading
+
+- OAuth — https://en.wikipedia.org/wiki/OAuth
+- Model Context Protocol — https://en.wikipedia.org/wiki/Model_Context_Protocol
+- Image source — https://commons.wikimedia.org/wiki/File:Internet_Security_Padlock_for_VPN_%26_Online_Privacy.jpg
 [View All Posts](../posts/index.md)

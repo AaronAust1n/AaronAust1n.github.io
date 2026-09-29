@@ -19,6 +19,9 @@ keywords: "OpenClaw, AI Safety, Agent Framework, Open Source, ClawJacked, CVE-20
 
 # Behind OpenClaw's Viral Moment
 
+![A rusty padlock](/images/posts/openclaw-security-concerns/rusty-padlock.jpg)
+*Image: A rusty padlock. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rusty_Padlock_Close_Up.jpg) / Saishna96, CC BY-SA 4.0.*
+
 > 260,000 GitHub Stars. A thousand people lining up at Tencent's Shenzhen headquarters to install it. Korean tech giants banning it on the same day. When an open source project simultaneously triggers euphoria and fear, that itself is worth pausing to think about.
 
 *Published on 2026-03-05*
@@ -92,4 +95,13 @@ Risk and opportunity coexist—saying that is saying nothing. A more precise des
 OpenClaw isn't the destination. It's the first project to move Agents from the lab to ordinary people's desktops, and the first to expose Agent security problems at scale. What happens next depends on whether this community—and the industry as a whole—can take the cracks underfoot seriously while the party is still going.
 
 ---
+
+
+---
+
+## References and Further Reading
+
+- Computer security — https://en.wikipedia.org/wiki/Computer_security
+- Open-source software security — https://en.wikipedia.org/wiki/Open-source_software_security
+- Image source — https://commons.wikimedia.org/wiki/File:Rusty_Padlock_Close_Up.jpg
 [View All Posts](../posts/index.md)

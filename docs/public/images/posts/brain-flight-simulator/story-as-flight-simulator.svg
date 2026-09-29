@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="376" viewBox="0 0 660 376">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow-pink" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ec4899"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="660" height="376" fill="#ffffff"/>
+
+  <text x="330" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">故事是大脑的飞行模拟器</text>
+  <text x="330" y="56" font-size="10" fill="#64748b" text-anchor="middle">Stories are the brain's flight simulator</text>
+
+  <!-- Top left: x=25, w=290, y=85, h=72, bottom=157 -->
+  <rect x="25" y="85" width="290" height="72" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="170" y="106.7" font-size="12" fill="#9d174d" text-anchor="middle">现实中的社会试错</text>
+  <text x="170" y="124.7" font-size="9" fill="#9d174d" text-anchor="middle">代价高 · 慢 · 不可重来</text>
+  <text x="170" y="142.7" font-size="10" fill="#9d174d" text-anchor="middle">被群体排斥 ≈ 死刑</text>
+
+  <!-- Top right: x=345, w=290 -->
+  <rect x="345" y="85" width="290" height="72" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="490" y="106.7" font-size="12" fill="#166534" text-anchor="middle">故事里的模拟试错</text>
+  <text x="490" y="124.7" font-size="9" fill="#166534" text-anchor="middle">零风险 · 可重复 · 量大</text>
+  <text x="490" y="142.7" font-size="10" fill="#166534" text-anchor="middle">小说 = 社会推理训练场</text>
+
+  <path d="M170,162 C 170,176 300,166 300,171" fill="none" stroke="#ec4899" marker-end="url(#arrow-pink)"/>
+  <path d="M490,162 C 490,176 360,166 360,171" fill="none" stroke="#22c55e" marker-end="url(#arrow-green)"/>
+
+  <!-- Center: x=160, w=340, y=182, h=72, bottom=254 -->
+  <rect x="160" y="182" width="340" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="330" y="203.7" font-size="12" fill="#6b21a8" text-anchor="middle">同一套社会认知回路</text>
+  <text x="330" y="221.7" font-size="9" fill="#6b21a8" text-anchor="middle">读故事与真实经历，调用高度重叠的神经通路</text>
+  <text x="330" y="239.7" font-size="10" fill="#6b21a8" text-anchor="middle">身体反应是真的，输入是虚构的</text>
+
+  <path d="M330,259 L330,268" fill="none" stroke="#3b82f6" marker-end="url(#arrow-blue)"/>
+
+  <!-- Result: x=130, w=400, y=279, h=72, bottom=351 -->
+  <rect x="130" y="279" width="400" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="330" y="300.7" font-size="12" fill="#1e40af" text-anchor="middle">读心能力更强</text>
+  <text x="330" y="318.7" font-size="9" fill="#1e40af" text-anchor="middle">常读小说的人在「眼神读心」测试中表现更好</text>
+  <text x="330" y="336.7" font-size="10" fill="#1e40af" text-anchor="middle">练的不是手眼协调，是社会认知</text>
+</svg>

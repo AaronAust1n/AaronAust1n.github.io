@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="665" height="559" viewBox="0 0 665 559">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+
+  <rect x="0" y="0" width="665" height="559" fill="#ffffff"/>
+
+  <text x="332" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">MiniMax 上市时间线</text>
+  <text x="332" y="56" font-size="10" fill="#64748b" text-anchor="middle">MiniMax: timeline to the IPO</text>
+
+  <rect x="25" y="85" width="615" height="54" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="332" y="107.2" font-size="12" fill="#b45309" text-anchor="middle">2022 初 ｜ 成立：上海，多模态路线</text>
+  <text x="332" y="124.2" font-size="9" fill="#b45309" text-anchor="middle">Founded in Shanghai; multimodal from day one</text>
+
+  <rect x="25" y="164" width="615" height="54" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="332" y="186.2" font-size="12" fill="#b45309" text-anchor="middle">2023 ｜ 首笔收入 350 万美元，语音模型发布</text>
+  <text x="332" y="203.2" font-size="9" fill="#b45309" text-anchor="middle">First revenue: $3.5M; speech model shipped</text>
+
+  <rect x="25" y="243" width="615" height="54" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="332" y="265.2" font-size="12" fill="#b45309" text-anchor="middle">2024 ｜ 收入 3050 万美元（+782%），视频与音乐模型</text>
+  <text x="332" y="282.2" font-size="9" fill="#b45309" text-anchor="middle">Revenue $30.5M (+782%); video &amp; music models</text>
+
+  <rect x="25" y="322" width="615" height="54" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="332" y="344.2" font-size="12" fill="#b45309" text-anchor="middle">2025.09 ｜ 用户 2.12 亿；9 个月收入 5340 万美元</text>
+  <text x="332" y="361.2" font-size="9" fill="#b45309" text-anchor="middle">212M users; $53.4M revenue in nine months</text>
+
+  <rect x="25" y="401" width="615" height="54" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="332" y="423.2" font-size="12" fill="#b45309" text-anchor="middle">2025.12 ｜ 通过港交所聆讯；拟发行 2539 万股</text>
+  <text x="332" y="440.2" font-size="9" fill="#b45309" text-anchor="middle">HKEX hearing passed; 25.39M shares offered</text>
+
+  <rect x="25" y="480" width="615" height="54" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="332" y="502.2" font-size="12" fill="#166534" text-anchor="middle">2026.01.09 ｜ 上市首日涨超 60%，市值 824 亿港元</text>
+  <text x="332" y="519.2" font-size="9" fill="#166534" text-anchor="middle">Listed: +60% on debut; HK$82.4B market cap</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="279" viewBox="0 0 760 279">
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow-pink" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ec4899"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="279" fill="#ffffff"/>
+
+  <text x="380" y="37" font-size="16" font-weight="600" fill="#1e293b" text-anchor="middle">三条路线，同一个瓶颈</text>
+  <text x="380" y="56" font-size="10" fill="#64748b" text-anchor="middle">Three routes around the autoregressive serial bottleneck</text>
+
+  <!-- Bottleneck: x=230, y=85, w=300, h=72, bottom=157 -->
+  <rect x="230" y="85" width="300" height="72" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="106.7" font-size="12" fill="#9d174d" text-anchor="middle">自回归的串行瓶颈</text>
+  <text x="380" y="124.7" font-size="9" fill="#9d174d" text-anchor="middle">autoregressive serial bottleneck</text>
+  <text x="380" y="142.7" font-size="12" fill="#9d174d" text-anchor="middle">一个 token 一个 token，逐个依赖</text>
+
+  <!-- Branches from y=162 to routes at y=182 -->
+  <path d="M330,162 C 270,180 135,166 135,171" fill="none" stroke="#a855f7" marker-end="url(#arrow-purple)"/>
+  <path d="M380,162 L380,171" fill="none" stroke="#22c55e" marker-end="url(#arrow-green)"/>
+  <path d="M430,162 C 490,180 625,166 625,171" fill="none" stroke="#f59e0b" marker-end="url(#arrow-amber)"/>
+
+  <!-- Routes: w=220, cols x=25, 270, 515; y=182, h=72 -->
+  <rect x="25" y="182" width="220" height="72" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="135" y="203.7" font-size="12" fill="#6b21a8" text-anchor="middle">Jev</text>
+  <text x="135" y="221.7" font-size="10" fill="#6b21a8" text-anchor="middle">砍掉生成，只做判断</text>
+  <text x="135" y="239.7" font-size="9" fill="#6b21a8" text-anchor="middle">cloud, 70–500ms</text>
+
+  <rect x="270" y="182" width="220" height="72" rx="8" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="203.7" font-size="12" fill="#166534" text-anchor="middle">Needle</text>
+  <text x="380" y="221.7" font-size="10" fill="#166534" text-anchor="middle">14MB，端侧离线</text>
+  <text x="380" y="239.7" font-size="9" fill="#166534" text-anchor="middle">500 tok/s on Raspberry Pi 5</text>
+
+  <rect x="515" y="182" width="220" height="72" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="203.7" font-size="12" fill="#b45309" text-anchor="middle">DiffusionGemma</text>
+  <text x="625" y="221.7" font-size="10" fill="#b45309" text-anchor="middle">扩散并行生成</text>
+  <text x="625" y="239.7" font-size="9" fill="#b45309" text-anchor="middle">256 tokens per step</text>
+</svg>

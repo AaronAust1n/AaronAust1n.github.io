@@ -22,6 +22,9 @@ keywords: "Palantir, data governance, ontology, enterprise valuation, AI platfor
 
 *Published on March 1, 2026*
 
+![Alex Karp at the AI Summit](/images/posts/palantir_valuation/alex-karp.jpg)
+*Image: Palantir CEO Alex Karp. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Alex_Karp_attends_AI_Summit_(53302457013)_(cropped).jpg) / UK Government, CC BY 2.0.*
+
 
 Palantir is worth $400 billion. When that number came out, analysts started finding reasons: government contract renewal rates, enterprise customer expansion rates, growth curves from AIP. These numbers are all correct, but they sidestep a more fundamental question: **what exactly is this company selling?**
 
@@ -126,4 +129,14 @@ If yes, $400B is just the beginning. If not, this valuation might already price 
 *But if you really want to understand Palantir, don't ask "how impressive is its technology." Ask "can its methodology continue to lead."*
 
 ---
+
+
+---
+
+## References and Further Reading
+
+- Palantir Technologies — https://en.wikipedia.org/wiki/Palantir_Technologies
+- Alex Karp — https://en.wikipedia.org/wiki/Alex_Karp
+- Image source — https://commons.wikimedia.org/wiki/File:Alex_Karp_attends_AI_Summit_(53302457013)_(cropped).jpg
+
 [View All Posts](./index.md)

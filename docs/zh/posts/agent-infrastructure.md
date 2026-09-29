@@ -20,6 +20,9 @@ keywords: "AI代理, Agent基建, 身份协议, Hashmind, 授权系统, 多Agent
 
 # [原创] Agent时代的基建，我们想错了
 
+![身份与授权](/images/posts/agent-infrastructure/padlock.jpg)
+*图：身份与授权。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Internet_Security_Padlock_for_VPN_%26_Online_Privacy.jpg) / mikemacmarketing, CC BY 2.0。*
+
 > 当Agent开始代替人执行动作——订机票、发邮件、修代码、管理日历——它凭什么执行？凭谁的身份？执行之后出了问题，谁来负责？
 
 *发布于 2026-02-28*
@@ -117,4 +120,13 @@ Agent 真正需要的那层基建，是行动基建——让 Agent 能合法地�
 
 到那个时候，再来补课，代价会高很多。
 ---
+
+
+---
+
+## 参考与延伸
+
+- OAuth — https://en.wikipedia.org/wiki/OAuth
+- 模型上下文协议（MCP）— https://en.wikipedia.org/wiki/Model_Context_Protocol
+- 图源 — https://commons.wikimedia.org/wiki/File:Internet_Security_Padlock_for_VPN_%26_Online_Privacy.jpg
 [查看所有文章](../posts/index.md)

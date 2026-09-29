@@ -19,6 +19,9 @@ keywords: "OpenClaw, Agent orchestration, window period, Big Tech, Alibaba Baili
 
 # How Long Does OpenClaw's Window Last
 
+![A lobster close-up](/images/posts/openclaw-dividend-period/lobster2.jpg)
+*Image: A lobster close-up. Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lobster_close-up.jpg) / Devon H. McCormick, CC BY-SA 4.0.*
+
 > Big Tech is collectively entering Agent orchestration. OpenClaw's window is closing. But "closing" and "dying" are two different things.
 
 *Published on March 6, 2026*
@@ -108,4 +111,13 @@ Third, Agent governance and security is a market that's opening up. 230,000 inst
 OpenClaw's window is narrowing, but the gap it tore open is widening. These are two different things.
 
 ---
+
+
+---
+
+## References and Further Reading
+
+- GitHub — https://en.wikipedia.org/wiki/GitHub
+- Open source — https://en.wikipedia.org/wiki/Open_source
+- Image source — https://commons.wikimedia.org/wiki/File:Lobster_close-up.jpg
 [View All Posts](../posts/index.md)

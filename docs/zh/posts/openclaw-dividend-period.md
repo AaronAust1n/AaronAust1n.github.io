@@ -19,6 +19,9 @@ keywords: "OpenClaw, Agent编排, 红利期, 大厂下场, 阿里百炼, 火山�
 
 # OpenClaw的红利期还有多久
 
+![一只龙虾特写](/images/posts/openclaw-dividend-period/lobster2.jpg)
+*图：一只龙虾特写。图源：[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lobster_close-up.jpg) / Devon H. McCormick, CC BY-SA 4.0。*
+
 > 大厂集体下场做Agent编排，OpenClaw的窗口正在关闭。但"关闭"和"死亡"是两件事。
 
 *发布于 2026-03-06*
@@ -108,4 +111,13 @@ Linux没有赢过Windows的桌面市场，但Linux定义了服务器、云计算
 OpenClaw的红利期在收窄，但它撕开的口子在变大。这是两件不同的事。
 
 ---
+
+
+---
+
+## 参考与延伸
+
+- GitHub — https://en.wikipedia.org/wiki/GitHub
+- 开源 — https://en.wikipedia.org/wiki/Open_source
+- 图源 — https://commons.wikimedia.org/wiki/File:Lobster_close-up.jpg
 [查看所有文章](../posts/index.md)
