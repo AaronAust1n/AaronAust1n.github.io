@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename)
 const baseUrl = 'https://aaronaust1n.github.io'
 const root = path.join(__dirname, '..')
 const outputPath = path.join(root, 'docs/public/sitemap.xml')
+const textOutputPath = path.join(root, 'docs/public/sitemap.txt')
 
 // Pages that are not posts and must not appear in the sitemap
 const NON_POST_FILES = new Set(['index.md', 'tags.md', 'hello-world.md'])
@@ -165,5 +166,16 @@ ${renderSingle(museumUrl)}
 
 // Write sitemap
 fs.writeFileSync(outputPath, xml, 'utf-8')
-console.log(`✅ Sitemap generated: ${outputPath}`)
-console.log(`📊 Total URLs: ${urls.length + 1}`)
+
+// Plain-text sitemap: same URLs, one absolute URL per line, nothing else.
+const textUrls = []
+for (const url of urls) {
+  textUrls.push(url.loc)
+  if (url.locZh) textUrls.push(url.locZh)
+}
+textUrls.push(museumUrl.loc)
+const uniqueTextUrls = [...new Set(textUrls)]
+fs.writeFileSync(textOutputPath, uniqueTextUrls.join('\n') + '\n', 'utf-8')
+
+console.log(`✅ Sitemap generated: ${outputPath} (${urls.length + 1} URLs)`)
+console.log(`✅ Text sitemap generated: ${textOutputPath} (${uniqueTextUrls.length} URLs)`)
