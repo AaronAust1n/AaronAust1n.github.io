@@ -1,25 +1,26 @@
 <template>
   <div class="tag-cloud">
     <h2>{{ title }}</h2>
-    <div class="tags">
-      <a
+    <div v-if="sortedTags.length" class="tags">
+      <button
         v-for="tag in sortedTags"
         :key="tag.name"
-        :href="`#${tag.name}`"
         class="tag"
         :style="{ fontSize: getTagSize(tag.count) }"
-        @click.prevent="filterByTag(tag.name)"
+        :aria-pressed="selectedTag === tag.name"
+        @click="filterByTag(tag.name)"
       >
         {{ tag.name }} ({{ tag.count }})
-      </a>
+      </button>
     </div>
-    
+    <p v-else class="empty">{{ noTagsText }}</p>
+
     <div v-if="selectedTag" class="filtered-posts">
       <h3>{{ postsTitle }}: {{ selectedTag }}</h3>
       <button @click="clearFilter" class="clear-filter">{{ clearText }}</button>
       <ul>
         <li v-for="post in filteredPosts" :key="post.url">
-          <a :href="post.url">{{ post.title }}</a>
+          <a :href="withBase(post.url)">{{ post.title }}</a>
           <span class="date">{{ post.date }}</span>
         </li>
       </ul>
@@ -29,7 +30,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useData, withBase } from 'vitepress'
 import { data as posts } from '../posts.data.mts'
+
+const { lang } = useData()
 
 const props = defineProps({
   title: {
@@ -43,22 +47,28 @@ const props = defineProps({
   clearText: {
     type: String,
     default: 'Clear filter'
+  },
+  noTagsText: {
+    type: String,
+    default: 'No tags yet.'
   }
 })
 
 const selectedTag = ref<string | null>(null)
 
+// Only posts in the current language
+const localePosts = computed(() => {
+  const current = lang.value === 'zh' || lang.value === 'zh-CN' ? 'zh' : 'en'
+  return posts.filter((post) => post.lang === current)
+})
+
 // Collect all tags and count occurrences
 const tagCounts = computed(() => {
   const counts = new Map<string, number>()
-  posts.forEach(post => {
-    if (post?.frontmatter?.tags && Array.isArray(post.frontmatter.tags)) {
-      post.frontmatter.tags.forEach(tag => {
-        if (tag) {
-          counts.set(tag, (counts.get(tag) || 0) + 1)
-        }
-      })
-    }
+  localePosts.value.forEach((post) => {
+    post.tags.forEach((tag) => {
+      if (tag) counts.set(tag, (counts.get(tag) || 0) + 1)
+    })
   })
   return counts
 })
@@ -66,28 +76,27 @@ const tagCounts = computed(() => {
 const sortedTags = computed(() => {
   return Array.from(tagCounts.value.entries())
     .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
 })
 
 const filteredPosts = computed(() => {
   if (!selectedTag.value) return []
-  return posts.filter(post => 
-    post?.frontmatter?.tags && 
-    Array.isArray(post.frontmatter.tags) && 
-    post.frontmatter.tags.includes(selectedTag.value)
-  )
+  return localePosts.value
+    .filter((post) => post.tags.includes(selectedTag.value))
+    .sort((a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime())
 })
 
 const getTagSize = (count: number) => {
+  const values = Array.from(tagCounts.value.values())
+  const maxCount = values.length ? Math.max(...values) : 1
   const minSize = 0.9
   const maxSize = 1.8
-  const maxCount = Math.max(...Array.from(tagCounts.value.values()))
   const size = minSize + (count / maxCount) * (maxSize - minSize)
   return `${size}em`
 }
 
 const filterByTag = (tag: string) => {
-  selectedTag.value = tag
+  selectedTag.value = selectedTag.value === tag ? null : tag
 }
 
 const clearFilter = () => {
@@ -113,11 +122,25 @@ const clearFilter = () => {
   transition: all 0.2s;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .tag:hover {
   background: var(--vp-c-brand-soft);
   transform: scale(1.05);
+}
+
+.tag[aria-pressed='true'] {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-3);
+  box-shadow: inset 0 -2px 0 var(--vp-c-brand-1);
+}
+
+.empty {
+  color: var(--vp-c-text-2);
 }
 
 .filtered-posts {

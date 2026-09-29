@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f5f5ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#171b18" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="形外 OUTLINE：183 件可交互视觉展品，13 大展区，体验、拆解与再创造。"
+    />
+    <title>形外 OUTLINE — 交互与视觉博物馆</title>
+    <link rel="canonical" href="https://aaronaust1n.github.io/museum/" />
+    <link rel="stylesheet" href="src/style.css">
+<link rel="stylesheet" href="src/effects.css">
+  </head>
+  <body>
+    <a class="skip" href="#collection">跳到展品</a>
+    <aside class="sidebar" aria-label="展馆导航">
+      <a class="brand" href="#" aria-label="形外首页"
+        ><span class="brand-symbol">o<span></span></span
+        ><span>形外<small>OUTLINE MUSEUM</small></span></a
+      >
+      <div class="side-kicker">A PLAYGROUND FOR CURIOSITY</div>
+      <nav>
+        <button class="nav-item active" data-view="all">
+          <span>▦</span>全部展品<b>183</b></button
+        ><button class="nav-item" data-view="new">
+          <span>✳</span>本期上新<b class="new-count">16</b></button
+        ><button class="nav-item" data-view="updated">
+          <span>↻</span>本轮升级<b>4</b></button
+        ><button class="nav-item" data-view="favorites">
+          <span>♡</span>我的收藏<b id="favorite-count">0</b>
+        </button>
+        <div class="nav-label">展区 / DEPARTMENTS</div>
+        <div id="category-nav"></div>
+      </nav>
+      <div class="side-bottom">
+        <div class="open-status"><i></i> 永不闭馆的灵感现场</div>
+        <p>自由探索 · 亲手试试 · 拆解原理</p>
+        <button id="open-about" class="text-button">关于展馆与实现手册 <span>↗</span></button>
+        <div class="version">VOL. 06 <span>183 EXPERIMENTS</span></div>
+      </div>
+    </aside>
+    <div class="mobile-shade" id="mobile-shade"></div>
+    <div class="page">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <button
+            class="icon-btn menu-btn"
+            id="menu-toggle"
+            aria-label="打开导航"
+            aria-expanded="false"
+          >
+            ☰</button
+          ><span>数字游园</span><span class="slash">/</span><b>交互与视觉博物馆</b>
+        </div>
+        <div class="top-actions">
+          <span class="local-badge"><i></i> 全部本地运行</span
+          ><button
+            class="icon-btn audio-global"
+            id="audio-mute"
+            aria-label="全馆静音"
+            aria-pressed="false"
+            title="全馆静音"
+          >
+            ♫</button
+          ><button
+            class="icon-btn"
+            id="motion-toggle"
+            aria-label="减少动态"
+            aria-pressed="false"
+            title="减少动态"
+          >
+            Ⅱ</button
+          ><button class="icon-btn" id="theme-toggle" aria-label="切换深色主题" title="切换主题">
+            ☾
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="hero" aria-label="欢迎来到形外">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="tiny-star">✳</span> LESS WATCHING, MORE PLAYING</div>
+            <h1>
+              让灵感，<br />发生在<span class="title-underline"
+                >指尖。<svg viewBox="0 0 250 16" aria-hidden="true">
+                  <path d="M3 10 Q120 0 246 8 M20 15 Q130 5 226 12" /></svg
+              ></span>
+            </h1>
+            <p>这里没有「请勿触摸」。<br />183 个交互与视觉实验，等你亲手唤醒。</p>
+            <button class="primary-btn" id="random-hero">随机探索一件 <span>↗</span></button>
+            <div class="hero-stats">
+              <div>
+                <strong>183<span>件</span></strong
+                ><small>可交互展品</small>
+              </div>
+              <div>
+                <strong>13<span>个</span></strong
+                ><small>灵感展区</small>
+              </div>
+              <div><strong>∞</strong><small>种创作可能</small></div>
+            </div>
+          </div>
+          <div class="hero-art" id="hero-art">
+            <div class="art-label">
+              <span><i></i> LIVE EXPERIMENT</span><span>FEATURED / 027</span>
+            </div>
+            <canvas id="hero-canvas" aria-label="随指针变化的流场"></canvas>
+            <div class="art-bottom">
+              <div>
+                <span class="art-number">027</span>
+                <h2>秩序之外<small>FLOW FIELD EXPLORATION</small></h2>
+              </div>
+              <button id="hero-open" class="art-arrow" aria-label="体验流场素描">↗</button>
+            </div>
+            <span class="art-hint">↖ 移动指针，扰动这片场</span>
+          </div>
+        </section>
+        <section class="release-strip" aria-label="本期上新">
+          <span class="release-badge">VOL. 06 / NEW</span>
+          <p>
+            <b>从动作，到状态与模拟。</b> 新增 16 件，原位升级 4 件。
+          </p>
+          <button id="explore-release">探索本期上新 <span>↗</span></button>
+        </section>
+        <section class="collection" id="collection">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">THE COLLECTION</div>
+              <h2 id="collection-title">
+                探索全部展品 <span id="result-count">183</span>
+              </h2>
+            </div>
+            <label class="search-box"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="search"
+                type="search"
+                placeholder="搜索效果、原理或关键词…"
+                aria-label="搜索展品"
+              /><kbd>/</kbd></label
+            >
+          </div>
+          <div class="filter-line">
+            <div class="chips" id="category-chips"></div>
+            <button class="shuffle-btn" id="random-small" title="在当前结果中随机探索">
+              ⇄ <span>随便逛逛</span>
+            </button>
+          </div>
+          <div class="collection-note">
+            <span><i></i> 卡片内即可互动 · 点击「进入实验台」放大探索</span
+            ><span id="view-caption">按展品编号排列</span>
+          </div>
+          <div class="gallery" id="gallery"></div>
+          <div class="empty" id="empty" hidden>
+            <span>⌕</span>
+            <h3>这里还没有展品</h3>
+            <p>换个关键词，或去收藏一些喜欢的效果。</p>
+            <button class="primary-btn" id="clear-filters">返回全部展品 ↗</button>
+          </div>
+          <div class="load-wrap">
+            <button id="load-more" class="secondary-btn">继续探索 <span>↓</span></button>
+            <p id="loaded-note"></p>
+          </div>
+        </section>
+        <section class="closing">
+          <span class="closing-star">✳</span>
+          <div>
+            <h2>好的灵感，值得亲手再造。</h2>
+            <p>每个效果都可以拆开看。带走原理，再创造你的版本。</p>
+          </div>
+          <button class="secondary-btn" id="open-guide">打开实现指南 ↗</button>
+        </section>
+        <footer>
+          <span>形外 OUTLINE <b>·</b> KEEP YOUR CURIOSITY ALIVE.</span
+          ><span>本地优先 / 无追踪 / 持续生长 <span class="footer-dot">●</span></span>
+        </footer>
+      </main>
+    </div>
+    <dialog id="lab" aria-labelledby="lab-title">
+      <div class="lab-shell">
+        <header class="lab-header">
+          <div>
+            <span class="eyebrow" id="lab-id"></span>
+            <h2 id="lab-title"></h2>
+          </div>
+          <div class="lab-head-actions">
+            <button class="icon-btn" id="lab-favorite" aria-label="收藏展品">♡</button
+            ><button class="icon-btn" id="lab-close" aria-label="关闭实验台">✕</button>
+          </div>
+        </header>
+        <div class="lab-body">
+          <div class="lab-left">
+            <div class="lab-tabs" role="tablist" aria-label="实验台视图">
+              <button
+                class="active"
+                id="tab-live"
+                role="tab"
+                aria-selected="true"
+                aria-controls="live-panel"
+              >
+                现场体验</button
+              ><button id="tab-code" role="tab" aria-selected="false" aria-controls="code-panel">
+                核心代码
+              </button>
+            </div>
+            <div id="live-panel" role="tabpanel" aria-labelledby="tab-live">
+              <div class="lab-stage" id="lab-stage"></div>
+              <div class="lab-toolbar">
+                <span id="lab-action"></span>
+                <div>
+                  <button id="lab-pause" class="small-btn">Ⅱ 暂停</button
+                  ><button id="lab-replay" class="small-btn">↻ 重播</button>
+                </div>
+              </div>
+            </div>
+            <div id="code-panel" role="tabpanel" aria-labelledby="tab-code" hidden>
+              <div class="code-header">
+                <span id="code-path"></span
+                ><button class="small-btn" id="copy-code">复制代码</button>
+              </div>
+              <pre><code id="lab-code"></code></pre>
+            </div>
+          </div>
+          <aside class="lab-controls">
+            <div class="eyebrow">MAKE IT YOURS</div>
+            <h3>你的实验参数</h3>
+            <p class="parameter-note">速度仅影响视觉时间；手动交互、墙钟任务和音轨不加速。</p>
+            <label class="range-label"
+              >动效速度 <output id="speed-out">1.0×</output
+              ><input id="speed" type="range" min="0.2" max="2" step="0.1" value="1"
+            /></label>
+            <div id="named-params"></div>
+            <label class="range-label" id="amount-control"
+              ><span id="amount-label">强度</span><output id="amount-out">50%</output
+              ><input id="amount" type="range" min="0" max="100" step="1" value="50" /></label
+            ><label class="range-label"
+              >画面缩放 <output id="scale-out">100%</output
+              ><input id="scale" type="range" min="70" max="130" step="1" value="100" /></label
+            ><label class="range-label"
+              >色相偏移 <output id="hue-out">0°</output
+              ><input id="hue" type="range" min="0" max="360" step="1" value="0" /></label
+            ><button id="reset-params" class="text-button">↺ 重置参数</button>
+            <div class="principle">
+              <div class="eyebrow">UNDER THE SURFACE</div>
+              <h3>如何实现</h3>
+              <p id="lab-principle"></p>
+              <div class="care-note" id="lab-caution"></div>
+            </div>
+            <button class="secondary-btn next-btn" id="lab-next">下一件灵感 ↗</button>
+          </aside>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="about" aria-labelledby="about-title">
+      <div class="about-body">
+        <button class="icon-btn about-close" id="about-close" aria-label="关闭说明">✕</button>
+        <div class="eyebrow">OPEN THE BLACK BOX</div>
+        <h2 id="about-title">不止于观看。<br />也可以带走方法。</h2>
+        <p>
+          形外是一个可持续扩展的交互与视觉实验库。13 个展区、183
+          件展品，每一件都拥有独立实现与实验参数。
+        </p>
+        <div class="about-grid">
+          <div>
+            <b>01 / 体验</b>
+            <p>在卡片中直接操作，进入实验台放大、调色、暂停与重播。</p>
+          </div>
+          <div>
+            <b>02 / 拆解</b>
+            <p>核心代码页展示实际运行的效果函数。Markdown 手册包含逐项原理、源码与注意事项。</p>
+          </div>
+          <div>
+            <b>03 / 延伸</b>
+            <p>统一目录驱动导航、计数和文档。按分类添加一个效果函数，再运行构建即可扩充展馆。</p>
+          </div>
+        </div>
+        <button class="primary-btn" id="download-guide">下载 183 项实现手册 ↓</button>
+        <p class="about-footnote">
+          纯本地运行，无外部字体与脚本。收藏及主题仅保存在本机浏览器；密码演示不存储任何输入。<br />手势与物理
+          v3.2.0：A/B/C 计划完成，159 + 24 = 183 件。六项原位升级不重复计数。
+          本轮新增 168–183，升级 027/079/087/089。不是完整 500 件分馆版。声音必须主动启用，无麦克风权限。
+        </p>
+      </div>
+    </dialog>
+    <div id="announcement" class="announcement" role="status" aria-live="polite"></div>
+    <!-- Deferred scripts execute in document order after parsing,
+         keeping ~1.2MB of effect code off the critical rendering path. -->
+    <script defer src="src/generated.js"></script>
+    <script defer src="src/toolkit.js"></script>
+    <script defer src="src/expansion-runtime.js"></script>
+    <script defer src="src/mechanics-runtime.js"></script>
+    <script defer src="src/audio-runtime.js"></script>
+    <script defer src="src/lab-runtime.js"></script>
+    <script defer src="src/effects/light.js"></script>
+    <script defer src="src/effects/pointer.js"></script>
+    <script defer src="src/effects/motion.js"></script>
+    <script defer src="src/effects/type.js"></script>
+    <script defer src="src/effects/space.js"></script>
+    <script defer src="src/effects/generative.js"></script>
+    <script defer src="src/effects/scroll.js"></script>
+    <script defer src="src/effects/controls.js"></script>
+    <script defer src="src/effects/design.js"></script>
+    <script defer src="src/effects/systems.js"></script>
+    <script defer src="src/effects/eras.js"></script>
+    <script defer src="src/effects/gesture.js"></script>
+    <script defer src="src/effects/audio.js"></script>
+    <script defer src="src/app.js"></script>
+  </body>
+</html>

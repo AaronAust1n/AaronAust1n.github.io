@@ -1,169 +1,762 @@
 /**
- * Custom Theme Styles
- * Optimized for Day/Night mode with a premium aesthetic.
+ * 形外 OUTLINE · AaronAust1n Theme
+ * Design language aligned with the OUTLINE interactive museum:
+ * warm paper background, deep green accent, editorial serif numerals,
+ * monospace micro-labels and thin hairline dividers.
  */
 
+/* -------------------------------------------------------------------------- */
+/* Design tokens                                                              */
+/* -------------------------------------------------------------------------- */
+
 :root {
-  /* Brand Colors - Ocean Blue Gradient (Clean & Professional) */
-  --vp-c-brand-1: #2563eb; /* Blue 600 */
-  --vp-c-brand-2: #0891b2; /* Cyan 600 */
-  
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-2));
+  color-scheme: light;
 
-  /* Light Mode Readability Overrides */
-  --vp-c-text-1: #111827; /* Darker gray for better contrast */
-  --vp-c-text-2: #4b5563; /* Readable secondary text */
-  --vp-c-bg-alt: #f3f4f6;
-  
-  /* Font Tweaks for Focus */
-  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --ol-bg: #f6f6f1;
+  --ol-paper: #ffffff;
+  --ol-ink: #252923;
+  --ol-ink-soft: #5f645b;
+  --ol-muted: #83877e;
+  --ol-line: #e1e4da;
+  --ol-accent: #345c43;
+  --ol-accent-strong: #2b4d38;
+  --ol-accent-soft: #eaf0e4;
+  --ol-side: #f0f1e9;
+  --ol-shadow: 0 16px 45px rgba(36, 47, 33, 0.08);
+  --ol-shadow-hover: 0 22px 55px rgba(36, 47, 33, 0.14);
+
+  --ol-font-serif: Georgia, 'Songti SC', 'SimSun', 'Times New Roman', serif;
+  --ol-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  --ol-radius: 7px;
+
+  /* VitePress mapping */
+  --vp-font-family-base:
+    Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei',
+    'Noto Sans CJK SC', 'WenQuanYi Zen Hei', sans-serif;
+  --vp-font-family-mono: var(--ol-font-mono);
+
+  --vp-c-bg: var(--ol-bg);
+  --vp-c-bg-alt: var(--ol-side);
+  --vp-c-bg-soft: var(--ol-accent-soft);
+  --vp-c-bg-elv: var(--ol-paper);
+
+  --vp-c-text-1: var(--ol-ink);
+  --vp-c-text-2: var(--ol-ink-soft);
+  --vp-c-text-3: var(--ol-muted);
+
+  --vp-c-divider: var(--ol-line);
+  --vp-c-border: var(--ol-line);
+  --vp-c-gutter: var(--ol-line);
+
+  --vp-c-brand-1: var(--ol-accent);
+  --vp-c-brand-2: #4c7a5c;
+  --vp-c-brand-3: var(--ol-accent-strong);
+  --vp-c-brand-soft: var(--ol-accent-soft);
+
+  --vp-c-default-1: var(--ol-ink);
+  --vp-c-default-2: var(--ol-ink-soft);
+  --vp-c-default-3: var(--ol-muted);
+  --vp-c-default-soft: var(--ol-accent-soft);
+
+  --vp-sidebar-bg-color: var(--ol-side);
+  --vp-nav-bg-color: rgba(246, 246, 241, 0.82);
+
+  --vp-custom-block-tip-border: var(--ol-line);
+  --vp-custom-block-tip-text: var(--ol-ink);
+  --vp-custom-block-tip-bg: var(--ol-accent-soft);
+
+  --vp-home-hero-name-color: var(--ol-ink);
+  --vp-home-hero-name-background: none;
 }
 
-/* Dark Mode Variables & Overrides */
 .dark {
-  --vp-c-brand-1: #3b82f6; /* Blue 500 */
-  --vp-c-brand-2: #22d3ee; /* Cyan 400 */
-  
-  /* Refined Dark Background - Deep Slate */
-  --vp-c-bg: #0f172a;
-  
-  /* High Contrast Text for Dark Mode */
-  --vp-c-text-1: #f8fafc; /* Almost white */
-  --vp-c-text-2: #cbd5e1; /* Light slate */
-  
-  /* Sidebar & Nav Colors for Dark Mode */
-  --vp-sidebar-bg-color: rgba(15, 23, 42, 0.85); /* Semi-transparent dark blue */
-  --vp-nav-bg-color: rgba(15, 23, 42, 0.85);
-  --vp-c-divider: rgba(255, 255, 255, 0.1);
-  --vp-c-bg-soft: #1e293b; /* Softer background for code blocks etc */
-  --vp-c-bg-alt: #0f172a;
+  color-scheme: dark;
+
+  --ol-bg: #171b18;
+  --ol-paper: #222823;
+  --ol-ink: #edf1e7;
+  --ol-ink-soft: #bcc4b8;
+  --ol-muted: #9ba69b;
+  --ol-line: #363e36;
+  --ol-accent: #c8e7a8;
+  --ol-accent-strong: #a8c98a;
+  --ol-accent-soft: #2a332a;
+  --ol-side: #1c211c;
+  --ol-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+  --ol-shadow-hover: 0 22px 55px rgba(0, 0, 0, 0.5);
+
+  --vp-c-bg: var(--ol-bg);
+  --vp-c-bg-alt: var(--ol-side);
+  --vp-c-bg-soft: var(--ol-accent-soft);
+  --vp-c-bg-elv: var(--ol-paper);
+
+  --vp-c-text-1: var(--ol-ink);
+  --vp-c-text-2: var(--ol-ink-soft);
+  --vp-c-text-3: var(--ol-muted);
+
+  --vp-c-divider: var(--ol-line);
+  --vp-c-border: var(--ol-line);
+  --vp-c-gutter: var(--ol-line);
+
+  --vp-c-brand-1: var(--ol-accent);
+  --vp-c-brand-2: var(--ol-accent-strong);
+  --vp-c-brand-3: #dff4c6;
+  --vp-c-brand-soft: var(--ol-accent-soft);
+
+  --vp-c-default-1: var(--ol-ink);
+  --vp-c-default-2: var(--ol-ink-soft);
+  --vp-c-default-3: var(--ol-muted);
+  --vp-c-default-soft: var(--ol-accent-soft);
+
+  --vp-sidebar-bg-color: var(--ol-side);
+  --vp-nav-bg-color: rgba(23, 27, 24, 0.82);
 }
 
-/* Global Background - Dark Mode Only */
-.dark body {
-  background: radial-gradient(circle at top center, #1e293b, #0f172a);
-  background-attachment: fixed;
-  min-height: 100vh;
-}
+/* -------------------------------------------------------------------------- */
+/* Base                                                                       */
+/* -------------------------------------------------------------------------- */
 
-/* Sidebar Backdrop Blur in Dark Mode */
-.dark .VPSidebar {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-right: 1px solid var(--vp-c-divider);
-}
-
-/* Light Mode Background - Clean */
 body {
-  /* Ensure light mode has a clean background if not set by default */
-  background-color: #ffffff;
+  background-color: var(--ol-bg);
+  font-feature-settings: 'cv02', 'cv03', 'cv04';
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Liquid Glass Cards - Dark Mode Only */
-.dark .VPFeature {
-  background: rgba(30, 41, 59, 0.4) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+.dark body {
+  background:
+    radial-gradient(circle at 50% -10%, #222a22 0%, var(--ol-bg) 55%) fixed;
 }
 
-.dark .VPFeature:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  background: rgba(30, 41, 59, 0.6) !important;
-  border-color: rgba(59, 130, 246, 0.3) !important; /* Subtle blue border on hover */
+::selection {
+  background: var(--ol-accent-soft);
+  color: var(--ol-ink);
 }
 
-/* Navbar Glass Effect - Dark Mode Only */
-.dark .VPNav {
-  background-color: rgba(15, 23, 42, 0.7) !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+/* Museum-flavoured scrollbar */
+* {
+  scrollbar-color: var(--ol-line) transparent;
 }
 
-/* Brand Button - Universal but refined */
+/* -------------------------------------------------------------------------- */
+/* Navigation & sidebar                                                       */
+/* -------------------------------------------------------------------------- */
+
+.VPNav {
+  background-color: var(--vp-nav-bg-color) !important;
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--ol-line);
+}
+
+.VPNavBar.has-sidebar .curtain {
+  display: none;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.VPSidebar {
+  background-color: var(--ol-side) !important;
+  border-right: 1px solid var(--ol-line);
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ol-muted);
+}
+
+.VPSidebarItem .link:hover .text {
+  color: var(--ol-accent);
+}
+
+.VPSidebarItem.is-active > .item .link .text {
+  color: var(--ol-accent);
+}
+
+.VPDocAside .outline-title {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ol-muted);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Buttons                                                                    */
+/* -------------------------------------------------------------------------- */
+
+.VPButton {
+  border-radius: var(--ol-radius) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.01em;
+}
+
 .VPButton.brand {
-  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2)) !important;
-  border: none !important;
-  border-radius: 20px !important; /* More pill-shaped for modern look */
-  color: white !important;
-  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-1), 0.2); /* Use variable for shadow if possible, else fallback */
-  transition: all 0.3s ease;
-}
-
-/* Fix for shadow color since we can't easily extract RGB from hex var in pure CSS without calc */
-.VPButton.brand {
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  background: var(--ol-ink) !important;
+  border: 1px solid var(--ol-ink) !important;
+  color: var(--ol-bg) !important;
+  box-shadow: none !important;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .VPButton.brand:hover {
-  opacity: 0.95;
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  background: var(--ol-accent-strong) !important;
+  border-color: var(--ol-accent-strong) !important;
 }
 
-/* Text Gradient for Hero Name */
-.VPHomeHero .name {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.dark .VPButton.brand {
+  background: var(--ol-accent) !important;
+  border-color: var(--ol-accent) !important;
+  color: #171b18 !important;
 }
 
-/* Typography Improvements for Article Reading */
-.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6 {
+.dark .VPButton.brand:hover {
+  background: var(--ol-accent-strong) !important;
+  border-color: var(--ol-accent-strong) !important;
+}
+
+.VPButton.alt {
+  background: transparent !important;
+  border: 1px solid var(--ol-line) !important;
+  color: var(--ol-ink) !important;
+}
+
+.VPButton.alt:hover {
+  border-color: var(--ol-accent) !important;
+  color: var(--ol-accent) !important;
+  background: var(--ol-accent-soft) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Home hero                                                                  */
+/* -------------------------------------------------------------------------- */
+
+.VPHero .name {
+  font-weight: 550 !important;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.VPHero .text {
+  font-weight: 550 !important;
+  letter-spacing: -0.03em;
+  color: var(--ol-ink);
+}
+
+.VPHero .tagline {
+  color: var(--ol-muted);
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 30rem;
+}
+
+/* Re-align hero when custom image is present */
+.VPHero.has-image .main {
+  max-width: 592px;
+}
+
+/* Custom hero media (FlowField) replaces the default blob image */
+.VPHero .image {
+  order: 2;
+  margin: 0;
+  min-height: 0;
+}
+
+.VPHero .image-container {
+  width: 100%;
+  height: auto;
+  transform: none;
+}
+
+.VPHero .image-bg {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .VPHero .image {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Eyebrow used in the hero / sections */
+.ol-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ol-accent);
+  font-family: var(--ol-font-mono);
+  margin-bottom: 18px;
+}
+
+.ol-eyebrow .ol-star {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.ol-stats {
+  display: flex;
+  gap: 38px;
+  margin-top: 34px;
+  flex-wrap: wrap;
+}
+
+.ol-stats > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ol-stats strong {
+  font-family: var(--ol-font-serif);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--ol-ink);
+}
+
+.ol-stats strong span {
+  font-family: var(--ol-font-mono);
+  font-size: 11px;
+  color: var(--ol-muted);
+  margin-left: 5px;
+}
+
+.ol-stats small {
+  margin-top: 6px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--ol-muted);
+  font-family: var(--ol-font-mono);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Features                                                                   */
+/* -------------------------------------------------------------------------- */
+
+.VPFeature {
+  background: var(--ol-paper) !important;
+  border: 1px solid var(--ol-line) !important;
+  border-radius: var(--ol-radius) !important;
+  box-shadow: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px);
+  border-color: var(--ol-accent) !important;
+  box-shadow: var(--ol-shadow-hover);
+}
+
+.VPFeature .icon {
+  background: var(--ol-accent-soft) !important;
+  border-radius: var(--ol-radius);
+}
+
+.VPFeature .title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.VPFeature .details {
+  color: var(--ol-muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Museum showcase                                                            */
+/* -------------------------------------------------------------------------- */
+
+.ol-showcase {
+  margin: 72px 0 8px;
+  border: 1px solid var(--ol-line);
+  border-radius: var(--ol-radius);
+  background: var(--ol-paper);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+}
+
+.ol-showcase-copy {
+  padding: 42px 44px;
+}
+
+.ol-showcase h2 {
+  margin: 4px 0 16px;
+  border-top: none;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 550;
+  letter-spacing: -0.035em;
+  line-height: 1.35;
+}
+
+.ol-showcase p {
+  color: var(--ol-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 26px;
+}
+
+.ol-showcase-art {
+  border-left: 1px solid var(--ol-line);
+  background: linear-gradient(160deg, #1b2620, #131b17);
+  color: #eff3d7;
+  padding: 34px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ol-showcase-art::after {
+  content: '';
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(200, 231, 168, 0.22), transparent 65%);
+  filter: blur(4px);
+}
+
+.ol-showcase-art .ol-label {
+  font-family: var(--ol-font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: #a9b89f;
+  text-transform: uppercase;
+}
+
+.ol-exhibit {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.ol-exhibit:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ol-exhibit .num {
+  font-family: var(--ol-font-serif);
+  font-style: italic;
+  font-size: 26px;
+  color: #d4e7a1;
+  min-width: 52px;
+}
+
+.ol-exhibit .meta strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f3f6e6;
+}
+
+.ol-exhibit .meta small {
+  font-family: var(--ol-font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #9fb093;
+}
+
+.ol-showcase .VPButton {
+  align-self: flex-start;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Section headings inside home content                                       */
+/* -------------------------------------------------------------------------- */
+
+.vp-doc h2 {
+  border-top: none;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.ol-section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--ol-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ol-muted);
+  margin: 64px 0 22px;
+}
+
+.ol-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ol-line);
+}
+
+/* Latest posts list */
+.ol-latest {
+  display: flex;
+  flex-direction: column;
+}
+
+.ol-latest-item {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 20px;
+  align-items: baseline;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--ol-line);
+  text-decoration: none !important;
+}
+
+.ol-latest-item:first-child {
+  border-top: 1px solid var(--ol-line);
+}
+
+.ol-latest-item .date {
+  font-family: var(--ol-font-mono);
+  font-size: 11px;
+  color: var(--ol-muted);
+}
+
+.ol-latest-item .title {
+  font-size: 16px;
+  font-weight: 550;
+  color: var(--ol-ink);
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.ol-latest-item:hover .title {
+  color: var(--ol-accent);
+}
+
+.ol-latest-item .arrow {
+  color: var(--ol-muted);
+  font-size: 18px;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.ol-latest-item:hover .arrow {
+  color: var(--ol-accent);
+  transform: translateX(4px);
+}
+
+/* Museum-flavoured poll panel */
+.ol-poll {
+  margin-top: 12px;
+  padding: 34px;
+  border: 1px solid var(--ol-line);
+  border-radius: var(--ol-radius);
+  background: var(--ol-side);
+}
+
+.ol-poll h2 {
+  margin: 0 0 4px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Flow field hero canvas                                                     */
+/* -------------------------------------------------------------------------- */
+
+.ol-flow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  min-height: 340px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #151f1c;
+  color: #eff3d7;
+}
+
+.ol-flow canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ol-flow .ol-flow-label {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  right: 22px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--ol-font-mono);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b6c3ab;
+  z-index: 2;
+}
+
+.ol-flow .ol-flow-label .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d0eda8;
+  margin-right: 7px;
+}
+
+.ol-flow .ol-flow-foot {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  font-family: var(--ol-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #c9d8bd;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Documentation typography                                                   */
+/* -------------------------------------------------------------------------- */
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
   letter-spacing: -0.02em;
 }
 
 .vp-doc p {
-  line-height: 1.8; /* More breathing room */
-  font-size: 1.1rem; /* Slightly larger text */
+  line-height: 1.85;
 }
 
-/* Hide the default h1 on the blog index page since we have a custom component header if needed, 
-   but actually we kept the h1 in markdown, let's style it better */
 .vp-doc h1 {
-  font-weight: 800;
+  font-weight: 750;
+}
+
+.vp-doc a {
+  text-decoration-color: color-mix(in srgb, var(--ol-accent) 40%, transparent);
+  text-underline-offset: 3px;
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: var(--ol-radius);
+  border: 1px solid var(--ol-line);
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
 }
 
 /* -------------------------------------------------------------------------- */
-/* Auto-Hiding Sidebar for Blog Posts                                         */
+/* Footer                                                                     */
 /* -------------------------------------------------------------------------- */
 
-/* Hide sidebar by default on large screens for blog posts, show hint */
+.VPFooter {
+  border-top: 1px solid var(--ol-line);
+  background: var(--ol-side) !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  color: var(--ol-muted);
+  font-size: 12px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive                                                                 */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 959px) {
+  .ol-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .ol-showcase-art {
+    border-left: none;
+    border-top: 1px solid var(--ol-line);
+  }
+}
+
+@media (max-width: 640px) {
+  .ol-showcase-copy {
+    padding: 30px 24px;
+  }
+
+  .ol-stats {
+    gap: 24px;
+    margin-top: 26px;
+  }
+
+  .ol-latest-item {
+    grid-template-columns: 1fr auto;
+    gap: 6px 14px;
+  }
+
+  .ol-latest-item .date {
+    grid-column: 1 / -1;
+  }
+
+  .ol-poll {
+    padding: 22px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Auto-Hiding Sidebar for Blog Posts (kept from previous theme)              */
+/* -------------------------------------------------------------------------- */
+
 @media (min-width: 960px) {
   body.is-blog-post .VPSidebar {
-    transform: translateX(calc(-100% + 10px)); /* Hide most, keep 10px trigger */
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-    opacity: 0.4; /* Faint hint */
+    transform: translateX(calc(-100% + 10px));
+    transition:
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s ease;
+    opacity: 0.4;
     z-index: 50;
     box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
   }
 
-  /* Show on hover */
   body.is-blog-post .VPSidebar:hover {
     transform: translateX(0);
     opacity: 1;
     box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
   }
 
-  /* Adjust content layout to be centered and full width since sidebar is hidden */
   body.is-blog-post .VPContent {
-    padding-left: 0 !important; /* Remove sidebar reservation space */
+    padding-left: 0 !important;
     margin-left: 0 !important;
   }
-  
-  /* Center the content container for better reading experience */
+
   body.is-blog-post .VPContent .container {
-    max-width: 900px !important; 
+    max-width: 900px !important;
     margin: 0 auto !important;
   }
-  
-  /* Ensure the content padding is balanced */
+
   body.is-blog-post .VPContent .VPDoc {
     padding: 32px 24px 96px;
     margin: 0 auto;

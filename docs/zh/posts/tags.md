@@ -9,4 +9,5 @@ description: "通过标签和主题探索博客文章"
   title="标签云" 
   postsTitle="标签为"
   clearText="清除筛选"
+  noTagsText="暂无标签"
 />

@@ -35,16 +35,28 @@ const t = (key) => {
   return messages[key][locale] || messages[key]['en-US']
 }
 
+const storageKey = computed(() => `votecard:${props.question}`)
+
+// Deterministic seed so the displayed counts are stable across reloads
+// instead of changing randomly on every visit.
+const seedCount = (question, option) => {
+  let h = 2166136261
+  const s = question + '|' + option
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i)
+    h = Math.imul(h, 16777619)
+  }
+  return (Math.abs(h) % 9) + 1
+}
+
 const selectedOption = ref(null)
 const hasVoted = ref(false)
 const votes = ref({})
 
-// Initialize random votes for demo purposes
-// In a real app, this would fetch from an API
 const initializeVotes = () => {
-  props.options.forEach(opt => {
-    votes.value[opt] = Math.floor(Math.random() * 10) + 1
-  })
+  votes.value = Object.fromEntries(
+    props.options.map((opt) => [opt, seedCount(props.question, opt)])
+  )
 }
 
 initializeVotes()
@@ -58,26 +70,38 @@ const getPercentage = (opt) => {
   return Math.round((votes.value[opt] / totalVotes.value) * 100)
 }
 
+const persist = () => {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.setItem(
+      storageKey.value,
+      JSON.stringify({ choice: selectedOption.value, votes: votes.value })
+    )
+  } catch {
+    /* storage unavailable — vote is session-only */
+  }
+}
+
 const castVote = (opt) => {
   if (hasVoted.value) return
   selectedOption.value = opt
   votes.value[opt]++
   hasVoted.value = true
-  
-  // Save to localStorage so vote persists on refresh (Client-side only)
-  if (typeof window !== 'undefined') {
-    localStorage.setItem(`vote_${props.question}`, opt)
-  }
+  persist()
 }
 
-// Check if already voted
+// Restore a previous vote (choice and counts) so the state is consistent
 onMounted(() => {
-  if (typeof window !== 'undefined') {
-    const savedVote = localStorage.getItem(`vote_${props.question}`)
-    if (savedVote) {
-      selectedOption.value = savedVote
+  if (typeof window === 'undefined') return
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey.value) || 'null')
+    if (saved && props.options.includes(saved.choice)) {
+      selectedOption.value = saved.choice
+      votes.value = saved.votes || votes.value
       hasVoted.value = true
     }
+  } catch {
+    /* corrupted entry — ignore */
   }
 })
 </script>
@@ -85,13 +109,16 @@ onMounted(() => {
 <template>
   <div class="vote-card">
     <h3 class="question">{{ question }}</h3>
-    
+
     <div class="options">
-      <div 
-        v-for="opt in options" 
+      <button
+        v-for="opt in options"
         :key="opt"
+        type="button"
         class="option-container"
         :class="{ 'voted': hasVoted, 'selected': selectedOption === opt }"
+        :disabled="hasVoted"
+        :aria-label="t('click_to_vote') + ': ' + opt"
         @click="castVote(opt)"
       >
         <div class="progress-bar" :style="{ width: hasVoted ? getPercentage(opt) + '%' : '0%' }"></div>
@@ -99,9 +126,9 @@ onMounted(() => {
           <span class="label">{{ opt }}</span>
           <span v-if="hasVoted" class="percentage">{{ getPercentage(opt) }}%</span>
         </div>
-      </div>
+      </button>
     </div>
-    
+
     <div class="footer">
       <span class="total">{{ totalVotes }} {{ t('votes') }}</span>
       <span v-if="!hasVoted" class="hint">{{ t('click_to_vote') }}</span>
@@ -142,6 +169,8 @@ onMounted(() => {
 
 .option-container {
   position: relative;
+  display: block;
+  width: 100%;
   margin-bottom: 0.8rem;
   height: 40px;
   background: var(--vp-c-bg-alt, #f3f4f6);
@@ -150,6 +179,9 @@ onMounted(() => {
   overflow: hidden;
   transition: all 0.2s ease;
   border: 1px solid transparent;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
 }
 
 :global(.dark) .option-container {
@@ -166,9 +198,18 @@ onMounted(() => {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.option-container:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1, #3b82f6);
+  outline-offset: 2px;
+}
+
 .option-container.selected {
   border-color: var(--vp-c-brand-1, #3b82f6);
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.option-container:disabled {
+  cursor: default;
 }
 
 .progress-bar {
@@ -196,7 +237,7 @@ onMounted(() => {
 }
 
 :global(.dark) .content {
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .label {

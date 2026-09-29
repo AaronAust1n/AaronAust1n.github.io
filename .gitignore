@@ -15,4 +15,8 @@ docs/**/hello-world.md
 blog
 .hashmind
 .选题
-docs/public/images/posts/README.md
+docs/public/sitemap.xml
+docs/.vitepress/stats.json
+IMAGE_GUIDELINES.md
+REVIEW.md
+AGENTS.md

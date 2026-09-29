@@ -13,13 +13,22 @@ function stripHtmlToText(html: string) {
     .trim()
 }
 
+// Only real articles: /posts/<slug>.html or /zh/posts/<slug>.html
+const POST_URL = /^\/(zh\/)?posts\/[^/]+\.html$/
+// Exclude scaffolding pages that also match the glob
+const NON_POST = /\/(index|tags|hello-world)\.html$/
+
 export default createContentLoader('**/posts/*.md', {
   includeSrc: false, // Don't include src to reduce payload
   render: true,
   excerpt: true, // Extract excerpt if available
   transform(rawData) {
     return rawData
-      .filter(({ url }) => !url.endsWith('/posts/') && !url.endsWith('/posts/index.html') && !url.endsWith('/index')) // Exclude index pages
+      .filter(
+        ({ url }) =>
+          POST_URL.test(url) &&
+          !NON_POST.test(url) // excludes index, tags and git-ignored hello-world drafts
+      )
       .sort((a, b) => {
         const dateA = +new Date(a.frontmatter?.date ?? 0)
         const dateB = +new Date(b.frontmatter?.date ?? 0)
@@ -36,6 +45,7 @@ export default createContentLoader('**/posts/*.md', {
           url: page.url,
           date: page.frontmatter?.date,
           excerpt: excerptHtml || (fallbackText ? `<p>${fallbackText}…</p>` : ''),
+          tags: Array.isArray(page.frontmatter?.tags) ? page.frontmatter.tags : [],
           lang: page.url.startsWith('/zh/') ? 'zh' : 'en'
         }
       })

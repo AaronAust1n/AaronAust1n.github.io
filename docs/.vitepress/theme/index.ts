@@ -5,6 +5,9 @@ import './style.css'
 import VoteCard from '../../components/VoteCard.vue'
 import BlogIndex from '../../components/BlogIndex.vue'
 import TagCloud from '../../components/TagCloud.vue'
+import FlowField from '../../components/FlowField.vue'
+import HomeLatest from '../../components/HomeLatest.vue'
+import MuseumShowcase from '../../components/MuseumShowcase.vue'
 
 export default {
   extends: DefaultTheme,
@@ -13,5 +16,8 @@ export default {
     app.component('VoteCard', VoteCard)
     app.component('BlogIndex', BlogIndex)
     app.component('TagCloud', TagCloud)
+    app.component('FlowField', FlowField)
+    app.component('HomeLatest', HomeLatest)
+    app.component('MuseumShowcase', MuseumShowcase)
   }
 }

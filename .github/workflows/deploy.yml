@@ -28,11 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      # - uses: pnpm/action-setup@v3 # Uncomment this if you're using pnpm
-      #   with:
-      #     version: 9
-      # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
+          fetch-depth: 0 # Full history for lastUpdated timestamps
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -43,11 +39,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build with VitePress
+        # generate-sitemap.js + vitepress build copy everything in docs/public/
+        # (robots.txt, sitemap, verification files, museum, ai-layoff-trap.html)
+        # into dist automatically.
         run: npm run docs:build
-      - name: Copy robots.txt to dist
-        run: cp docs/.vitepress/public/robots.txt docs/.vitepress/dist/robots.txt
-      - name: Copy BingSiteAuth.xml to dist
-        run: cp docs/.vitepress/public/BingSiteAuth.xml docs/.vitepress/dist/BingSiteAuth.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -25,7 +25,10 @@ const filteredPosts = computed(() => {
 
 const formatDate = (dateString) => {
   if (!dateString) return ''
-  const date = new Date(dateString)
+  // Parse YYYY-MM-DD in local time; Date-only strings are otherwise
+  // interpreted as UTC and can shift the displayed day by one.
+  const m = String(dateString).match(/^(\d{4})-(\d{2})-(\d{2})/)
+  const date = m ? new Date(+m[1], +m[2] - 1, +m[3]) : new Date(dateString)
   return date.toLocaleDateString(lang.value, {
     year: 'numeric',
     month: 'long',
