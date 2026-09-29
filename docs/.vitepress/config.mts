@@ -49,7 +49,10 @@ function postFiles(dir) {
 /** Map a relative source path (e.g. `zh/posts/foo.md`) to its site URL. */
 function pageUrl(relativePath) {
   const noExt = relativePath.replace(/\.md$/, '')
-  if (noExt.endsWith('index')) return noExt.replace(/index$/, '') || '/'
+  if (noExt.endsWith('index')) {
+    const base = noExt.replace(/index$/, '')
+    return base.startsWith('/') ? base : `/${base}`
+  }
   return `/${noExt}.html`
 }
 
